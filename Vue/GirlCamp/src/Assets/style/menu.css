@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap');
+#nav {
+  width: 100%;
+  height: 60px;
+  overflow: hidden;
+  border-bottom-left-radius: 20px;
+}
+
+.NavLink{
+color: white;
+font-size: 25px;
+text-decoration: none;
+text-transform: uppercase;
+padding: 0px 10px 10px 10px;
+
+
+}
+
+.NavLink:hover {
+  font-size: 30px;
+  text-shadow: 1px 1px 2px white;
+  color: lightblue;
+}
+
+.NavLink:active {
+  font-size: 30px;
+  text-shadow: 1px 1px 2px white;
+  color: lightblue;
+}
+
+#logo {
+  /*font*/
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 45px;
+  letter-spacing: -2px;
+  text-shadow: 1px 1px 2px white;
+
+  /*box*/
+  padding-left: 20px;
+  padding-right: 40px;
+  margin-right: 10px;
+  margin-top: -20px;
+}
+
+@media only screen and (max-width: 1000px) {
+nav {
+  background-color: yellowgreen;
+}
+
+
+}

@@ -1,0 +1,58 @@
+<template>
+  <div class="grid-container">
+    <div class="grid-img">
+      <img class="svgImage" src="../Assets/img/undraw_activity_tracker_1l9o.svg" alt="activity" />
+    </div>
+    <div class="grid-info">
+      <h1>Welcome our La Girl Camp</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
+      <button @click="goPage1()">REGISTER</button>
+    </div>
+    <div class="grid-blogg">
+      <h1 class="blog-header">BLOG COMING SOON</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, aliquid, perferendis necessitatibus nisi dolor sunt saepe at enim quos reiciendis dolores adipisci sit. Deserunt dolorum aliquid eveniet vero, odit modi.</p>
+    </div>
+  </div>
+</template>
+
+<script>
+import Axios from "axios";
+
+export default {
+  methods: {
+    async goPage1() {
+      this.$router.push("Register");
+    }
+  }
+};
+</script>
+
+<style scoped >
+.blog-header{
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 550px auto;
+  grid-gap: 10px;
+}
+.grid-info {
+  color: aliceblue;
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  padding-right: 10px;
+}
+.grid-img {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+.grid-blogg{
+  grid-column: 1/ span 3;
+  grid-row: 2;
+} 
+.svgImage {
+  padding: 20px 20px 10px 20px;
+  width: 100%;
+}
+</style>
+
