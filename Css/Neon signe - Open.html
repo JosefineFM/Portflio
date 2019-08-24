@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neon signs </title>
+</head>
+
+<body>
+    <div>
+        <h1>O P E N <br /> 24/7 </h1>
+    </div>
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Baloo+Chettan&display=swap');
+
+    body {
+        background: black;
+        font-family: 'Baloo Chettan', cursive;
+    }
+
+    h1 {
+        font-size: 45px;
+        height: 80%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        text-shadow: 0 0 10px white, 0 0 60px #e41749, 0 0 30px #e41749;
+        animation-delay: 1s;
+        animation: blink 6s alternate-reverse infinite;
+    }
+
+    div {
+        position: absolute;
+        top: 10%;
+
+        left: 40%;
+        margin-left: -50px;
+        width: 250px;
+        height: 250px;
+        border: 6px solid white;
+        border-radius: 50%;
+        box-shadow: 0 0 50px #0028ff, inset 0 0 50px #0028ff;
+        animation: blink 6s alternate infinite;
+        animation-delay: 3s;
+    }
+
+    @keyframes blink {
+
+        0%,
+        2%,
+        4%,
+        6%,
+        30%,
+        32%,
+        75%,
+        77%,
+        100% {
+            opacity: 1
+        }
+
+        3%,
+        5%,
+        31%,
+        76% {
+            opacity: 0.7
+        }
+    }
+</style>
+
+</html>
