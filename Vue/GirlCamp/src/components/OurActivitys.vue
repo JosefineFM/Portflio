@@ -79,5 +79,36 @@ button{
 .svgImage{
   width: 100%;
 }
+
+@media only screen and (max-width: 1000px) {
+  .svgImage {
+
+  width: 100%;
+}
+  h1{
+    text-align: center
+  }
+  .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+ 
+}
+  .grid-img {
+  grid-column: 1;
+  grid-row: 1;
+}
+  .grid-info {
+  grid-column: 1;
+  grid-row: 2;
+   width: auto;
+  
+}
+.grid-MoreInfo{
+  grid-column: 1;
+  grid-row: 3;
+
+}
+
+}
 </style>
 

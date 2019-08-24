@@ -1,24 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap');
-.backToPage{
+
+.backToPage {
   color: white;
   font-size: 20px;
   text-decoration: none;
 }
-.backToPage:hover{
+
+.backToPage:hover {
   color: white;
   font-size: 25px;
   text-shadow: 3px 3px #517191;
   text-decoration: none;
 }
 
-p, h1, h2 {
+p,
+h1,
+h2 {
   color: white;
 }
 
-body
-{
+body {
   background-color: #181d45;
-  font-family: 'Titillium Web', sans-serif;  
+  font-family: 'Titillium Web', sans-serif;
 }
 
 button {
@@ -31,26 +34,26 @@ button {
   border-radius: 3px;
 
 }
-button:hover{
+
+button:hover {
   color: white;
   box-shadow: inset 0 0 0 2px white;
   background-color: transparent;
 }
 
 @media only screen and (min-width: 1000px) {
+
   /* Checkboxes */
   h3 {
     margin-top: -20px;
     width: 179px;
     padding: 10px;
     margin-left: 35%;
-    /* -webkit-margin-start: 10%;
-    margin-inline-start: 10%; */
 
   }
 
   label {
-color: white;
+    color: white;
     font-size: 20px;
     display: inline
   }
@@ -70,22 +73,23 @@ color: white;
   }
 
   input {
-    font-family: 'Titillium Web', sans-serif;  
+    font-family: 'Titillium Web', sans-serif;
 
     width: 250px;
     font-size: 15px;
     border: none;
     border-bottom: solid 1px #393c83;
     padding: 2px;
-      border-radius: 4px;
-    
+    border-radius: 4px;
+
   }
+
   #wrapper {
     margin: auto;
     width: 70%;
   }
 
-  #footer{
+  #footer {
     border: white;
     width: 100%;
     height: 50px;
@@ -95,25 +99,36 @@ color: white;
 }
 
 @media only screen and (max-width: 1000px) {
-
-/* Dropdown meny */
-
-
-
-
-  body{
+  body {
     background-color: black;
   }
 
+  button {
+    border: none;
+    width: 250px;
+    font-size: 19px;
+    border-radius: 2px;
+    padding: 10px;
+    transition: all 1s ease 0s;
+    border-radius: 3px;
+    margin: auto;
+    display: block;
 
-  #wrapper {
+  }
+
+  p {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  /* #wrapper {
     background: white;
     width: 70%;
     border: 3px solid white;
     padding: 10px;
-  }
+  } */
 
-  h3 
+  /* h3 
   {
     margin-top: -20px;
     background-color: white;
@@ -137,10 +152,7 @@ color: white;
     margin-left: 20px;
   }
 
-  p {
-    margin-left: 20px;
-    font-size: 20px;
-  }
+ 
 
   input {
     margin-left: 20px;
@@ -187,7 +199,7 @@ color: white;
     margin: 10%;
     border: 3px solid white;
     padding: 10px;
-  }
+  } */
 
 
 }
