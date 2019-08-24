@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap');
+.backToPage{
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+.backToPage:hover{
+  color: white;
+  font-size: 25px;
+  text-shadow: 3px 3px #517191;
+  text-decoration: none;
+}
 
 p, h1, h2 {
   color: white;
@@ -59,10 +70,15 @@ color: white;
   }
 
   input {
+    font-family: 'Titillium Web', sans-serif;  
+
     width: 250px;
     font-size: 15px;
     border: none;
     border-bottom: solid 1px #393c83;
+    padding: 2px;
+      border-radius: 4px;
+    
   }
   #wrapper {
     margin: auto;

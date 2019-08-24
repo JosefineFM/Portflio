@@ -2,73 +2,88 @@
   <div id="wrapper">
     <section>
       <div id="main">
-        <h3>Edit your information</h3>
-        <p>
-        Name: {{personprop.FullName}}
-        </p>
-        <p>
-          Email:
-          {{personprop.email}}
-        </p>
-        <hr>
-        <p>Address:</p>
-        <input
-          id="address"
-          type="text"
-          v-model="person.address"
-          maxlength="50"
-          placeholder=" Max 50 characters"
-        >
-        <p>Gender:</p>
-        <input type="radio" name="gender" value="Male" v-model="person.gender"> Male
-        <input type="radio" name="gender" value="Female" v-model="person.gender">
-        Female
-        <p>Purpose:</p>
-        <select v-model="person.purpose">
-          <option value="Business">Business</option>
-          <option value="Pleasure">Pleasure</option>
-          <option value="Both">Both</option>
-        </select>
+        <router-link class="backToPage" to="register">Back</router-link>
+
+        <h2>Edit your information</h2>
+
+        <table>
+          <tr>
+            <td>
+              <p>The childe that you are chosing the activity for:</p>
+            </td>
+            <td>
+              <p class="childeName">{{personprop.ChildeFullName}}</p>
+            </td>
+          </tr>
+        </table>
+
+        <hr />
 
         <p>Choose one or two activites.</p>
-        <input
-          type="checkbox"
-          name="activites"
-          value="Football"
-          :disabled="person.activities.length >= 2 && !person.activities.includes('football')"
-          v-model="person.activities"
-        >
-        <label>Football</label>
-        <input
-          type="checkbox"
-          name="activites"
-          value="Basketball"
-          :disabled="person.activities.length >= 2 && !person.activities.includes('basketball')"
-          v-model="person.activities"
-        >
-        <label>Basketball</label>
-        <input
-          type="checkbox"
-          name="activites"
-          value="Tennis"
-          :disabled="person.activities.length >= 2 && !person.activities.includes('tennis')"
-          v-model="person.activities"
-        >
-        <label>Tennis</label>
-        <input
-          type="checkbox"
-          name="activites"
-          value="E-sports"
-          :disabled="person.activities.length >= 2 && !person.activities.includes('e-sports')"
-          v-model="person.activities"
-        >
-        <label>E-sports</label>
-        <br>
+
+        <table class="activity">
+          <tr>
+            <td>
+              <p>Football:</p>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  value="Football"
+                  :disabled="person.activities.length >= 2 && !person.activities.includes('football')"
+                  v-model="person.activities"
+                />
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <p>Basketball</p>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  name="activites"
+                  value="Basketball"
+                  :disabled="person.activities.length >= 2 && !person.activities.includes('basketball')"
+                  v-model="person.activities"
+                />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>Tennis</p>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  name="activites"
+                  value="Tennis"
+                  :disabled="person.activities.length >= 2 && !person.activities.includes('tennis')"
+                  v-model="person.activities"
+                />
+                <span class="slider round"></span>
+              </label>
+            </td>
+            <td>
+              <p>E-sport</p>
+              <label class="switch">
+                <input
+                  type="checkbox"
+                  name="activites"
+                  value="E-sports"
+                  :disabled="person.activities.length >= 2 && !person.activities.includes('e-sports')"
+                  v-model="person.activities"
+                />
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+        </table>
+
+        <br />
         <button id="saveButton" @click="save()">Save</button>
       </div>
     </section>
-    <footer>
-    </footer>
+    <footer></footer>
   </div>
 </template>
 <script>
@@ -80,11 +95,18 @@ export default {
     return {
       person: {
         FullName: this.personprop.FullName,
-        lastname: this.personprop.lastname,
-        email: this.personprop.email,
-        address: null,
-        gender: null,
-        purpose: null,
+        Email: this.personprop.Email,
+        Address: this.personprop.Address,
+        ZipCode: this.personprop.ZipCode,
+        City: this.personprop.City,
+        Country: this.personprop.Country,
+
+        ChildeFullName: this.personprop.ChildeFullName,
+        ChildeEmail: this.personprop.ChildeEmail,
+        Gender: this.personprop.Gender,
+        Age: this.personprop.Age,
+        Message: this.personprop.Message,
+
         activities: []
       }
     };
@@ -111,39 +133,21 @@ export default {
   }
 };
 </script>
+
+<style>
+@import "../Assets/style/checkbox";
+</style>
+
 <style scoped>
-.gender {
-  display: inline;
-  margin-left: -90px;
-  margin-right: -90px;
+.childeName {
+  padding-left: 15px;
 }
-
-input[type="radio" i] {
-  margin: 0px 0px 0px 0px;
-}
-input[type="checkbox" i] {
-  width: 20px;
-}
-h3 {
-  margin-left: 35%;
-}
-
-@media only screen and (max-width: 600px) {
-  h3 {
-    margin-left: 15%;
-  }
-  input[type="text" i] {
-    width: 200px;
-    margin-left: 20px;
-  }
-
-  #facebook {
-    display: none;
-  }
-  input[type="checkbox" i] {
-    margin: 0px 0px 0px 0px;
-    width: 20px;
-  }
+/* .activity p{
+  color: pink;
+} */
+.activity td {
+  color: pink;
+  padding: 0px 50px 30px 0px;
 }
 </style>
 

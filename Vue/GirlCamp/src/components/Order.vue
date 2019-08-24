@@ -2,15 +2,34 @@
   <div id="wrapper">
     <section>
       <div id="main">
-        <h3>Your activiti information</h3>
-        <p>First Name: {{personprop.firstname}}</p>
-        <p>Last Name: {{personprop.lastname}}</p>
-        <p>Email: {{personprop.email}}</p>
+        <router-link class="backToPage" to="register">Back</router-link>
+
+        <h1>Your Order</h1>
+
+        <h2>Parents Information:</h2>
         <hr>
-        <p>Address: {{personprop.address}}</p>
-        <p>Gender: {{personprop.gender}}</p>
-        <p>Purpose: {{personprop.purpose}}</p>
-        <p>Activities: {{personprop.activities.toString()}} (Go back to page 2 to alter choices)</p>
+        <p>Parent Name: {{personprop.FullName}}</p>
+        <p>Email: {{personprop.Email}}</p>
+        <p>Address: {{personprop.Address}}</p>
+        <p>ZipCode: {{personprop.ZipCode}}</p>
+        <p>City: {{personprop.City}}</p>
+        <p>Country: {{personprop.Country}}</p>
+
+        
+
+        <hr>
+        <h2>Your Childe Information:</h2>
+        <p>FullName: {{personprop.ChildeFullName}}</p>
+        <p>Email: {{personprop.ChildeEmail}}</p>
+        <p>Gender: {{personprop.Gender}}</p>
+        <p>Age: {{personprop.Age}}</p>
+        <p>Additional Information: {{personprop.Message}}</p>
+        <p>Activities: {{personprop.activities.toString()}}</p>
+      
+      <hr>
+      <p>We will send Information to you and some question to your child so we can be best
+        preperde to ther arivale
+      </p>
       </div>
     </section>
     <footer>
@@ -27,25 +46,25 @@ export default {
   data() {
     return {
       person: {
-        firstname: this.personprop.firstname,
-        lastname: this.personprop.lastname,
-        email: this.personprop.email,
-        address: this.personprop.address,
-        gender: this.personprop.gender,
-        purpose: this.personprop.purpose,
+        FullName: this.personprop.FullName,
+        Email: this.personprop.Email,
+        Address: this.personprop.Address,
+        ZipCode: this.personprop.ZipCode,
+        City: this.personprop.City,
+        Country: this.personprop.Country,
+        ChildeFullName: this.personprop.ChildeFullName,
+        ChildeEmail: this.personprop.ChildeEmail,
+        Gender: this.personprop.gender,
+        Age: this.personprop.Age,
+        Message: this.personprop.Message,
         activities: this.personprop.activities
       }
     };
   },
 
   created: function() {
-    this.person.firstname = this.personprop.firstname;
-    this.person.lastname = this.personprop.lastname;
-    this.person.email = this.personprop.email;
-    this.person.address = this.personprop.address;
-    this.person.gender = this.personprop.gender;
-    this.person.purpose = this.personprop.purpose;
-    this.person.activities = this.personprop.activities;
+
+    console.log("Yout info:", this.person);
   },
 
   methods: {
@@ -54,19 +73,6 @@ export default {
 };
 </script>
 <style scoped>
-h3 {
-  font-family: "Hind", sans-serif;
-  margin-top: -20px;
-  background-color: white;
-  width: 200px;
-  padding: 10px;
-  margin-left: 35%;
-}
 
-@media only screen and (max-width: 600px) {
-  h3 {
-    margin-left: 15%;
-  }
-}
 </style>
 
