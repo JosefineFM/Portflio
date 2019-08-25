@@ -80,7 +80,8 @@
         </table>
 
         <br />
-        <button id="saveButton" @click="save()">Save</button>
+        <button id="saveButton" @click="save()">SAVE</button>
+        <button  @click="goToActivity()">SE YOUR ORDER</button>
       </div>
     </section>
     <footer></footer>
@@ -129,6 +130,11 @@ export default {
       } else {
         alert("Your information has been saved!");
       }
+    },
+        goToActivity(){
+      console.log("New Page");
+      this.$router.push("Order");
+
     }
   }
 };
