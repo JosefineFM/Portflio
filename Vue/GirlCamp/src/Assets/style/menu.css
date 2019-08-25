@@ -1,19 +1,41 @@
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,700&display=swap');
-#nav {
-  width: 100%;
-  height: 60px;
-  overflow: hidden;
-  border-bottom-left-radius: 20px;
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li{
+  display: inline;
+}
+.header{
+  height: 100px;
+  padding: 0 20px;
+  color: #fff;
+}
+#logo {
+  /*font*/
+  padding-right: 20px;
+  float: left;
+  color: white;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 45px;
+  letter-spacing: -2px;
+  text-shadow: 1px 1px 2px white;
 }
 
-.NavLink{
-color: white;
-font-size: 25px;
-text-decoration: none;
-text-transform: uppercase;
-padding: 0px 10px 10px 10px;
+.menu{
+  float: left;
+  padding-top: 20px;
+}
 
-
+.menu .NavLink{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px; 
+  font-size: 25px;
+  padding-top: 25px;
 }
 
 .NavLink:hover {
@@ -22,31 +44,59 @@ padding: 0px 10px 10px 10px;
   color: lightblue;
 }
 
-.NavLink:active {
+.show-menu-btn, .hide-menu-btn{
+  transition: 0.4s;
   font-size: 30px;
-  text-shadow: 1px 1px 2px white;
-  color: lightblue;
+  cursor: pointer;
+  display: none;
 }
 
-#logo {
-  /*font*/
-  color: white;
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 45px;
-  letter-spacing: -2px;
-  text-shadow: 1px 1px 2px white;
-
-  /*box*/
-  padding-left: 20px;
-  padding-right: 40px;
-  margin-right: 10px;
-  margin-top: -20px;
+.show-menu-btn{
+  float: right;
 }
 
-@media only screen and (max-width: 1000px) {
-nav {
-  background-color: yellowgreen;
+.show-menu-btn svg{
+line-height: 100px;
 }
 
 
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+@media screen and (max-width:1000px) {
+.show-menu-btn,.hide-menu-btn{
+  display: block;
+}
+.menu{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #181d45;
+  right: -100%;
+  top: 0;
+  text-align: center;
+  padding: 80px 0;
+  line-height: normal;
+  transition: 0.7s;
+}
+
+.menu a{
+ display: block;
+ padding: 20px;
+}
+
+.hide-menu-btn{
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  
+}
+
+#chk:checked ~ .menu{
+  right:0;
+}
 }
