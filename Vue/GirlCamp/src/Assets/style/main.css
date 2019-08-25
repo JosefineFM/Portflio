@@ -100,7 +100,7 @@ button:hover {
 
 @media only screen and (max-width: 1000px) {
   body {
-    background-color: black;
+    background-color: #181d45;
   }
 
   button {
