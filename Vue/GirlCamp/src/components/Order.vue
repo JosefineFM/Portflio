@@ -2,7 +2,7 @@
   <div id="wrapper">
     <section>
       <div id="main">
-        <router-link class="backToPage" to="register">Back</router-link>
+        <router-link class="backToPage" to="Activity">Back</router-link>
 
         <h1>Your Order</h1>
 
