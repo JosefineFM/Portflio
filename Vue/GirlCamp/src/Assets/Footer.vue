@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <p>&copy:2019 Josefine Magnussen</p>
+    <p>copy:2019 Josefine Magnussen</p>
   </div>
 </template>
     <style>
