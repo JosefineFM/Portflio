@@ -121,8 +121,16 @@
         <textarea v-model="person.Message" name="extraInfo" class="extraInfo" cols="50" rows="10"></textarea>
       </div>
       <br />
+
+ <p v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="error in errors">{{ error }}</li>
+    </ul>
+  </p>
+
       <button id="saveButton" @click="save()">SAVE</button>
-      <button  @click="goToActivity()">SELECT ACTIVITY</button>
+      <button v-show="isEditing" @click="goToActivity()">SELECT ACTIVITY</button>
     </div>
     <footer></footer>
   </div>
@@ -139,6 +147,8 @@ export default {
   },
   data() {
     return {
+        errors: [],
+      isEditing: false,
       person: {
         FullName: null,
         Email: null,
@@ -175,10 +185,24 @@ export default {
     //   this.person = response.data;
     // },
 
-    save(error) {
-      alert("Your information has been saved!");
+    save(e) {
+       if (this.person.FullName ) {
       console.log(this.person);
       this.$emit("save", this.person);
+      this.isEditing = true;
+      }
+
+      this.errors = [];
+
+      if (!this.person.FullName) {
+        this.errors.push('Name required.');
+      }
+
+
+
+      
+    }
+     
     },
 
     goToActivity(){
@@ -186,7 +210,7 @@ export default {
       this.$router.push("Activity");
 
     }
-  }
+  
 };
 </script>
 

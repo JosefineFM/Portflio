@@ -1,9 +1,9 @@
 <template>
   <div class="grid-container" >
- <div class="grid-img"> 
+ <!-- <div class="grid-img">  -->
   
-<img class="svgImage" src="../Assets/img/undraw_super_woman_dv0y.svg" alt="activity"> 
-</div> 
+<!-- <img class="svgImage" src="../Assets/img/undraw_super_woman_dv0y.svg" alt="activity">  -->
+<!-- </div>  -->
 <div class="grid-info">
   <h1>Our activitys</h1>
   <h2>Football</h2>
