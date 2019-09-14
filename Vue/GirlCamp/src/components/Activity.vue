@@ -148,9 +148,7 @@ export default {
 .childeName {
   padding-left: 15px;
 }
-/* .activity p{
-  color: pink;
-} */
+
 .activity td {
   color: pink;
   padding: 0px 50px 30px 0px;

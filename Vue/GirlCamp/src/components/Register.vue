@@ -121,6 +121,13 @@
         <textarea v-model="person.Message" name="extraInfo" class="extraInfo" cols="50" rows="10"></textarea>
       </div>
       <br />
+
+    <p v-if="errors.length">
+    <b>Please correct the following error(s):</b>
+    <ul>
+      <li v-for="error in errors">{{ error }}</li> 
+    </ul>
+  </p>
       <button id="saveButton" @click="save()">SAVE</button>
       <button  @click="goToActivity()">SELECT ACTIVITY</button>
     </div>
@@ -139,6 +146,8 @@ export default {
   },
   data() {
     return {
+      message:"",
+      errors: [],
       person: {
         FullName: null,
         Email: null,
@@ -176,9 +185,25 @@ export default {
     // },
 
     save(error) {
-      alert("Your information has been saved!");
-      console.log(this.person);
-      this.$emit("save", this.person);
+      console.log("Hei");
+      if(this.person.FullName && this.person.Email){
+        console.log("your info i loged");
+        return true;
+        
+      }
+      this.errors = []
+
+      if(!this.person.FullName){
+        console.log("Error")
+        this.errors.push('Name rewuired.');
+      }
+      // if (input = empty) {
+      //   alert("Fill the form!")
+      // }else {
+      //   alert("Your information has been saved!");
+      // console.log(this.person);
+      // this.$emit("save", this.person);
+      // }
     },
 
     goToActivity(){

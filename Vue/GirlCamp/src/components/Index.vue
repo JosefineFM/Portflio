@@ -26,7 +26,9 @@ export default {
   }
 };
 </script>
-
+<style>
+@import "../Assets/style/main";
+</style>
 <style scoped >
 .blog-header{
   text-align: center;
@@ -56,7 +58,7 @@ export default {
 }
 @media only screen and (max-width: 1000px) {
   .svgImage {
-
+padding: 0;
   width: 100%;
 }
   h1{

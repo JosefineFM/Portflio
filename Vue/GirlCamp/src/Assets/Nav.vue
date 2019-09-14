@@ -43,17 +43,7 @@
 <script>
 export default {
   methods: {
-    async openSlideMenu() {
-      console.log("Testen funka");
-      // document.getElementById('side-menu').style.width = '250px';
-      // document.getElementById('main').style.marginLeft = '250px';
-    },
 
-    async closeSlideMenu() {
-      console.log("Du lukka menyen");
-      // document.getElementById('side-menu').style.width = '0px';
-      // document.getElementById('main').style.marginLeft = '0px';
-    }
   }
 };
 </script>
