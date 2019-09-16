@@ -1,74 +1,120 @@
 <template>
   <div class="grid-container">
-    <div class="grid-img">
-      <img class="svgImage" src="../Assets/img/undraw_super_woman_dv0y.svg" alt="activity" />
-    </div>
-    <div class="grid-info">
-      <h1>Our activitys</h1>
-      <h2>Football</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
-      <table class="info">
-        <tr>
-          <td class="bold">Where:</td>
-          <td>Sverige</td>
-        </tr>
-        <tr>
-          <td class="bold">Price:</td>
-          <td>3000kr pr uke</td>
-        </tr>
-      </table>
+    <header class="main-header">
+      <h1>Our Activities</h1>
+    </header>
+    <main class="container">
+      <section class="card">
+        <img src="../Assets/img/football.jpg" alt />
+        <div class="info">
+          <h3>
+            Football
+            <span>Training Camp</span>
+          </h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum ex facere modi eaque tempore
+            distinctio assumenda aliquid natus incidunt.
+            Minus adipisci, dolor voluptatibus est deserunt fugit itaque optio non rem.
+          </p>
+          <p>
+            <span>Price:</span> 5000
+          </p>
 
-      <h2>Basketball</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
-      <table class="info">
-        <tr>
-          <td class="bold">Where:</td>
-          <td>Sverige</td>
-        </tr>
-        <tr>
-          <td class="bold">Price:</td>
-          <td>3000kr pr uke</td>
-        </tr>
-      </table>
-    </div>
+          <p>
+            <span>Where:</span> Sweden
+          </p>
+          <button>Order</button>
+        </div>
+      </section>
 
-    <div class="grid-MoreInfo">
-      <h2>Handball</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
-      <table class="info">
-        <tr>
-          <td class="bold">Where:</td>
-          <td>Sverige</td>
-        </tr>
-        <tr>
-          <td class="bold">Price:</td>
-          <td>3000kr pr uke</td>
-        </tr>
-      </table>
+      <section class="card" data-aos="fade-left" data-aos-duration="3000">
+        <img src="../Assets/img/Basketball.jpg" alt />
+        <div>
+          <h3>
+            Basketball
+            <span>Traning Camp</span>
+          </h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum ex facere modi eaque tempore
+            distinctio assumenda aliquid natus incidunt.
+            Minus adipisci, dolor voluptatibus est deserunt fugit itaque optio non rem.
+          </p>
+          <p>
+            <span>Price:</span> 5000
+          </p>
 
-      <h2>E-sport</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum est quasi animi rerum maiores nobis hic, a odio cum fuga aut molestiae, ipsam quibusdam iste debitis ducimus, officia earum accusantium.</p>
-      <table class="info">
-        <tr>
-          <td class="bold">Where:</td>
-          <td>Sverige</td>
-        </tr>
-        <tr>
-          <td class="bold">Price:</td>
-          <td>3000kr pr uke</td>
-        </tr>
-      </table>
-      <button @click="goPage1()">REGISTER</button>
-    </div>
+          <p>
+            <span>Where:</span> Sweden
+          </p>
+          <button>Order</button>
+        </div>
+      </section>
+
+      <section class="card" data-aos="fade-right">
+        <img src="../Assets/img/Handball.jpg" alt />
+        <div class="info">
+          <h3>
+            Handball
+            <span>Training Camp</span>
+          </h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum ex facere modi eaque tempore
+            distinctio assumenda aliquid natus incidunt.
+            Minus adipisci, dolor voluptatibus est deserunt fugit itaque optio non rem.
+          </p>
+          <p>
+            <span>Price:</span> 5000
+          </p>
+
+          <p>
+            <span>Where:</span> Sweden
+          </p>
+          <button>Order</button>
+        </div>
+      </section>
+
+      <section class="card" data-aos="fade-left">
+        <img src="../Assets/img/Esport.jpg" alt />
+        <div>
+          <h3>
+            E-sport
+            <span>Training Camp</span>
+            <br />
+            <span class="new">NEW!</span>
+          </h3>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum ex facere modi eaque tempore
+            distinctio assumenda aliquid natus incidunt.
+            Minus adipisci, dolor voluptatibus est deserunt fugit itaque optio non rem.
+          </p>
+          <p>
+            <span>Price:</span> 5000
+          </p>
+          <p>
+            <span>Where:</span> Sweden
+          </p>
+          <button>Order</button>
+        </div>
+      </section>
+    </main>
 
     <footer></footer>
   </div>
 </template>
 
 <script>
-import Axios from "axios";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default {
+  created() {
+    console.log("On create");
+    AOS.init({
+      offset: 400,
+      duration: 1000
+    });
+  },
+
   methods: {
     async goPage1() {
       this.$router.push("Register");
@@ -76,82 +122,102 @@ export default {
   }
 };
 </script>
-<style >
-</style>
-
-<style scoped >
-button {
-  border: none;
-  width: 250px;
-  font-size: 19px;
-  border-radius: 2px;
-  padding: 10px;
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 10px;
-  padding: 20px 10px 0px 20px;
-}
-.grid-info {
-  grid-column: 1;
-  grid-row: 1;
-  width: 500px;
-  height: 100%;
+<style scoped>
+.new {
+  font-size: 22px;
 }
 
-.grid-MoreInfo {
-  grid-column: 1/ 3;
-  grid-row: 2;
+img {
+  /* height: auto; */
+  width: auto;
 }
-.grid-img {
-  grid-column: 2;
-  grid-row: 1;
+
+a {
+  color: #333;
+  text-decoration: none;
 }
-.svgImage {
-  width: 100%;
+
+.container {
+  max-width: 80%;
+  margin: auto;
+  overflow: auto;
 }
-.info {
-  color: white;
-  font-size: 20px;
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rm;
 }
-.bold {
-  font-size: 20px;
+
+.main-header h1 {
+  font-size: 4rm;
+  margin-bottom: 2rm;
+  line-height: 1.2;
+}
+
+p span {
+  color: #b50d10;
   font-weight: bold;
-  padding-right: 10px;
 }
-  button {
-    margin: 30px 0px 30px 0px;
-  }
-@media only screen and (max-width: 1000px) {
-  .svgImage {
-    width: 100%;
-  }
-  h1 {
-    text-align: center;
-    margin: 0;
-  }
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-  .grid-img {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .grid-info {
-    grid-column: 1;
-    grid-row: 2;
-    width: auto;
-  }
-  .grid-MoreInfo {
-    grid-column: 1;
-    grid-row: 3;
-  }
-  p {
-    margin: 1px;
+
+.main-header h1 span {
+  color: #b50d10;
+}
+
+.main-header p {
+  font-size: 2rm;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  grid-gap: 2rem;
+  /* background: #f1f1f1; */
+  margin-bottom: 4rem;
+}
+
+/* .card h3 {
+  margin-bottom: 2rem;
+} */
+
+.card h3 span {
+  color: #b50d10;
+}
+
+.card img {
+  height: 400px;
+}
+
+.card > div {
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: black;
+  color: #fff;
+  padding: 0.8rem 1.8rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1000px) {
+  .card {
+    display: block;
   }
 
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 </style>
 
