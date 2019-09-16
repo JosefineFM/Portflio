@@ -5,6 +5,7 @@ import Activity from '@/components/Activity'
 import Order from '@/components/Order'
 import Index from '@/components/Index'
 import OurActivitys from'@/components/OurActivitys'
+import OrderSendt from '@/components/OrderSendt'
 
 
 Vue.use(Router)
@@ -40,6 +41,12 @@ export default new Router({
       name: 'Order',
       component: Order,
       props: true
+    },
+    
+    {
+      path: '/OrderSendt',
+      name: 'OrderSendt',
+      component: OrderSendt
     }
   ]
 })
