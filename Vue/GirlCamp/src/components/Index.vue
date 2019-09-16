@@ -19,6 +19,23 @@
 import Axios from "axios";
 
 export default {
+  created(){
+    const axios = require('axios');
+
+// Make a request for a user with a given ID
+axios.get('https://api.myjson.com/bins/jmzl1')
+  .then(function (response) {
+    // handle success
+    console.log(response);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .finally(function () {
+    // always executed
+  });
+  },
   methods: {
     async goPage1() {
       this.$router.push("Register");
@@ -39,7 +56,6 @@ export default {
   grid-gap: 10px;
 }
 .grid-info {
-  color: aliceblue;
   grid-column: 3;
   grid-row: 1 / span 2;
   padding-right: 10px;
