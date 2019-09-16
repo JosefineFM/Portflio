@@ -98,7 +98,10 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+
+    </footer>
+
   </div>
 </template>
 

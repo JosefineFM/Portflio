@@ -19,6 +19,16 @@ color: #181d45;
 button {
   color: white;
   background-color: #181d45;
+
+}
+
+body {
+  background-color: #1d1f29;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+button {
+
   border: none;
   width: 250px;
   font-size: 19px;
@@ -88,6 +98,7 @@ button:hover {
 
 @media only screen and (max-width: 1000px) {
 
+
   button {
     border: none;
     width: 250px;
@@ -110,7 +121,7 @@ button:hover {
     margin-left: 20px;
     text-align: center;
   }
-  
+
 
 
 }

@@ -130,6 +130,7 @@
   </p>
       <button id="saveButton" @click="save()">SAVE</button>
       <button v-show="isEditing"  @click="goToActivity()">SELECT ACTIVITY</button>
+
     </div>
     <footer></footer>
   </div>
@@ -183,16 +184,19 @@ export default {
     //   this.person = response.data;
     // },
 
-     save(e) {
+
+    save(e) {
        if (this.person.FullName ) {
       console.log(this.person);
       this.$emit("save", this.person);
       this.isEditing = true;
       }
+
       this.errors = [];
       if (!this.person.FullName) {
         this.errors.push('Name required.');
       }
+
       
     }
      
