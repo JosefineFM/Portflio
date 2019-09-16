@@ -11,7 +11,8 @@
   </div>
 </template>
 
-<style>
+<style scoped>
+
 a{
   color: aliceblue;
   text-decoration: none;
@@ -43,8 +44,6 @@ li {
     .divider{
       display: none;
     }
-    a{
-      text-decoration: underline;
-    }
+
     }
 </style>
