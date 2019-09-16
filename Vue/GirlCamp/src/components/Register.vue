@@ -129,7 +129,7 @@
     </ul>
   </p>
       <button id="saveButton" @click="save()">SAVE</button>
-      <button  @click="goToActivity()">SELECT ACTIVITY</button>
+      <button v-show="isEditing"  @click="goToActivity()">SELECT ACTIVITY</button>
     </div>
     <footer></footer>
   </div>
@@ -142,12 +142,11 @@ export default {
   name: "LoadData",
   props: ["personprop"],
   data: {
-// isShowing:true,
   },
   data() {
     return {
-      message:"",
       errors: [],
+      isEditing: false,
       person: {
         FullName: null,
         Email: null,
@@ -184,34 +183,28 @@ export default {
     //   this.person = response.data;
     // },
 
-    save(error) {
-      console.log("Hei");
-      if(this.person.FullName && this.person.Email){
-        console.log("your info i loged");
-        return true;
-        
+     save(e) {
+       if (this.person.FullName ) {
+      console.log(this.person);
+      this.$emit("save", this.person);
+      this.isEditing = true;
       }
-      this.errors = []
-
-      if(!this.person.FullName){
-        console.log("Error")
-        this.errors.push('Name rewuired.');
+      this.errors = [];
+      if (!this.person.FullName) {
+        this.errors.push('Name required.');
       }
-      // if (input = empty) {
-      //   alert("Fill the form!")
-      // }else {
-      //   alert("Your information has been saved!");
-      // console.log(this.person);
-      // this.$emit("save", this.person);
-      // }
+      
+    }
+     
     },
+
 
     goToActivity(){
       console.log("New Page");
       this.$router.push("Activity");
 
     }
-  }
+  
 };
 </script>
 
