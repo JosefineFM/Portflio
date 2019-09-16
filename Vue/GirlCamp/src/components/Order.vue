@@ -27,9 +27,7 @@
         <p>Activities: {{personprop.activities.toString()}}</p>
       
       <hr>
-      <p>We will send Information to you and some question to your child so we can be best
-        preperde to ther arivale
-      </p>
+<button @click="seYourOrder()"> Send us you booking</button>
       </div>
     </section>
     <footer>
@@ -61,14 +59,12 @@ export default {
       }
     };
   },
-
-  created: function() {
-
-    console.log("Yout info:", this.person);
-  },
-
   methods: {
-  
+      seYourOrder(){
+      console.log("New Page");
+      this.$router.push("OrderSendt");
+
+    }
   }
 };
 </script>
