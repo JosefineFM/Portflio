@@ -178,12 +178,6 @@ export default {
   
   },
   methods: {
-    // async showData() {
-    //   const url = "https://api.myjson.com/bins/rhfcg";
-    //   const response = await Axios.get(url);
-    //   this.person = response.data;
-    // },
-
 
     save(e) {
        if (this.person.FullName ) {
@@ -197,7 +191,7 @@ export default {
         this.errors.push('Name required.');
       }
 
-      
+
     }
      
     },
