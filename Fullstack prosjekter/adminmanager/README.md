@@ -1,6 +1,10 @@
-# adminmanager
+# Adminmanagment App
 
 > Admin app
+
+> Frontend: Vue.JS
+
+> Backend: Firebase
 
 ## Build Setup
 
