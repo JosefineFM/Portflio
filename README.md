@@ -11,4 +11,7 @@ Girl camp live demo [GitHub Pages](https://girlcamp01.firebaseapp.com/#/).
 ## Adminmanager App
 
 **Frontend:** Vue.js
+
 **Backend:** Firebase
+
+[Adminmanager Code](https://github.com/JosefineFM/Portflio/tree/master/adminmanager)
