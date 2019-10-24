@@ -1,0 +1,16 @@
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\bin\Debug\netcoreapp2.1\FoodTableBackend.deps.json
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\bin\Debug\netcoreapp2.1\FoodTableBackend.runtimeconfig.json
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\bin\Debug\netcoreapp2.1\FoodTableBackend.runtimeconfig.dev.json
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\bin\Debug\netcoreapp2.1\FoodTableBackend.dll
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\bin\Debug\netcoreapp2.1\FoodTableBackend.pdb
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\obj\Debug\netcoreapp2.1\FoodTableBackend.csprojAssemblyReference.cache
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\obj\Debug\netcoreapp2.1\FoodTableBackend.RazorAssemblyInfo.cache
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\obj\Debug\netcoreapp2.1\FoodTableBackend.RazorAssemblyInfo.cs
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\obj\Debug\netcoreapp2.1\FoodTableBackend.AssemblyInfoInputs.cache
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\obj\Debug\netcoreapp2.1\FoodTableBackend.AssemblyInfo.cs
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\obj\Debug\netcoreapp2.1\FoodTableBackend.RazorTargetAssemblyInfo.cache
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\obj\Debug\netcoreapp2.1\FoodTableBackend.dll
+C:\Users\josef\Documents\GitHub\Portflio\Food Tabel\FoodTableBackend\FoodTableBackend\obj\Debug\netcoreapp2.1\FoodTableBackend.pdb
