@@ -61,6 +61,10 @@ export default {
 </script>
 <style scoped>
 /* Img on the button on the page */
+.dashboard{
+  padding: 0px 50px 0px 50px;
+}
+
 .chip {
   margin-top: 10px;
   display: inline-block;
@@ -80,12 +84,7 @@ export default {
   margin-left: 10%;
   background-color: #049ff9;
 }
-/* .plus {
-  height: 60px;
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-} */
+
 table {
   width: 99%;
     border-collapse: collapse;
