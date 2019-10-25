@@ -19,7 +19,7 @@ export default {
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap');
-
+@import './assets/main.css';
 .main-container{
   margin-left: 20px;
 }
