@@ -2,6 +2,11 @@
 
 > Admin app
 
+> Frontend. Vue.js
+
+> Backend: Firebase
+
+
 ## Build Setup
 
 ``` bash
