@@ -1,22 +1,23 @@
 <template>
   <div class="dashboard">
-        <h2>Employees</h2>
-        <table>
-            <tr>
-  <th>Department</th>
-  <th>Id</th>
-  <th>Name</th>
-  <th></th>
+  <h2>Employees</h2>
+    <table>
+      <tr>
+        <th>Department</th>
+        <th>Start Date</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th></th>
   </tr>
   <tr v-for="employee in employees" v-bind:key="employee.id">
-  <td class="chip">{{employee.dept}}</td>
-  <td>{{employee.employee_id}}</td>
-  <td> {{employee.name}}</td>
-  <td>
-    <router-link class="button" v-bind:to="{name: 'view-employee', params: {employee_id: employee.employee_id}}">
-     Edit
-    </router-link>
-    
+    <td class="chip">{{employee.dept}}</td>
+    <td>{{employee.startDate}}</td>
+    <td>{{employee.employee_id}}</td>
+    <td> {{employee.name}}</td>
+    <td>
+      <router-link class="button" v-bind:to="{name: 'view-employee', params: {employee_id: employee.employee_id}}">
+        Edit
+      </router-link>
     </td>
   </tr>
         </table>
@@ -39,10 +40,12 @@ export default {
   },
 
   created() {
+   
     db.collection("employees")
-     .orderBy("dept")
+     .orderBy("employee_id")
       .get()
       .then(querySnapshot => {
+         console.log(this.employees);
         querySnapshot.forEach(doc => {
           //  console.log(doc.data());
           const data = {
@@ -50,7 +53,8 @@ export default {
             employee_id: doc.data().employee_id,
             name: doc.data().name,
             dept: doc.data().dept,
-            position: doc.data().position
+            position: doc.data().position,
+            startDate: doc.data().startDate
           };
           this.employees.push(data);
           // console.log(this.employees);

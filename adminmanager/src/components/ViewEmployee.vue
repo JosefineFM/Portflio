@@ -11,6 +11,10 @@
         <td>{{employee_id}}</td>
       </tr>
       <tr>
+        <th>Start Date:</th>
+        <td>{{startDate}}</td>
+      </tr>
+      <tr>
         <th>Department:</th>
         <td>{{dept}}</td>
       </tr>
@@ -41,7 +45,8 @@ export default {
       employee_id: null,
       name: null,
       dept: null,
-      position: null
+      position: null,
+      startDate: null
     };
   },
 
@@ -56,6 +61,7 @@ export default {
             vm.name = doc.data().name;
             vm.dept = doc.data().dept;
             vm.position = doc.data().position;
+             vm.startDate = doc.data().startDate;
           });
         });
       });
@@ -75,6 +81,7 @@ export default {
             this.name = doc.data().name;
             this.dept = doc.data().dept;
             this.position = doc.data().position;
+             this.startDate = doc.data().startDate;
           });
         });
     },

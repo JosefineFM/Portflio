@@ -2,7 +2,7 @@
   <div class="edit-employee">
     <h3>Edit Employee</h3>
     <div class="row">
-      <form @submit.prevent="updateEmployee()" class="col s12">
+      <form @submit.prevent="updateEmployee()">
         <div class="row">
           <div class="input-field">
             <input disabled type="text" v-model="employee_id" placeholder="Employee ID" required />
@@ -16,13 +16,19 @@
         </div>
 
         <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field">
+            <input  type="date" v-model="startDate" placeholder="Start Date" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field">
             <input type="text" v-model="dept" placeholder="Department" required />
           </div>
         </div>
 
         <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field">
             <input type="text" v-model="position" placeholder="Position" required />
           </div>
         </div>
@@ -46,7 +52,8 @@ export default {
       employee_id: null,
       name: null,
       dept: null,
-      position: null
+      position: null,
+      startDate: null
     };
   },
   beforeRouteEnter(to, from, next) {
@@ -60,6 +67,8 @@ export default {
             vm.name = doc.data().name;
             vm.dept = doc.data().dept;
             vm.position = doc.data().position;
+                        vm.startDate = doc.data().startDate;
+
           });
         });
       });
@@ -79,6 +88,7 @@ export default {
             this.name = doc.data().name;
             this.dept = doc.data().dept;
             this.position = doc.data().position;
+             this.startDate = doc.data().startDate;
           });
         });
     },
@@ -93,7 +103,8 @@ export default {
                 employee_id: this.employee_id,
                 name: this.name,
                 dept: this.dept,
-                position: this.position
+                position: this.position,
+                 startDate: this.startDate
               })
               .then(() => {
                 this.$router.push({
