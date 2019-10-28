@@ -3,10 +3,10 @@
     <section id="foodtable">
       <div id="navbar">
         <a
-          @click="foods(foodItem.foodID)"
-          v-for="(foodItem, foodID) in category"
-          v-bind:key="foodID"
-        >{{foodItem.food_Item}}</a>
+          @click="foods(foodItem.foodId)"
+          v-for="(foodItem, foodId) in category"
+          v-bind:key="foodId"
+        >{{foodItem.foodItem}}</a>
       </div>
 
       <div class="searchForFood">
@@ -16,10 +16,10 @@
 
       <div id="tablefood">
         <p
-          @click="foodInfo(foodItem.foodID)"
-          v-for="(foodItem, foodID) in filteredFoods"
-          v-bind:key="foodID"
-        >{{foodItem.food_Item}}</p>
+          @click="foodInfo(food_Item.foodId)"
+          v-for="(food_Item, foodId) in filteredFoods"
+          v-bind:key="foodId"
+        >{{food_Item.food_Item}}</p>
       </div>
     </section>
     <footer></footer>
@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       category: [],
-      foodID: "",
+      foodId: "",
       foodList: [],
       search: ""
     };
@@ -42,12 +42,12 @@ export default {
     const self = this;
 
     axios
-      .get("/api/FoodCategory")
+      .get("https://localhost:44367/api/foodcategory")
       .then(function(response) {
         self.category.push(...response.data);
 
         console.log(response.data);
-        // console.log(self.category[0].foodID);
+         console.log(self.category[0].foodId);
       })
       .catch(function(error) {
         // handle error
@@ -58,18 +58,17 @@ export default {
       });
   },
   methods: {
-    foods(foodID) {
+    foods(foodId) {
       this.foodList.length = 0;
       const self = this;
-      // console.log("click: " + foodID);
+      console.log("click: " + foodId);
 
       axios
-        .get("api/Food/" + foodID)
+        .get("https://localhost:44367/api/FoodInfo/" + foodId)
         .then(function(response) {
-          // console.log("Data: " + response.data);
+    
 
           self.foodList.push(...response.data);
-
           // console.log("FoodListInfo: " + JSON.stringify(self.foodList));
         })
         .catch(function(error) {
@@ -81,9 +80,9 @@ export default {
         });
     },
 
-    foodInfo(foodID) {
+    foodInfo(foodId) {
       // console.log("FoodInfo: " + foodID);
-      this.$router.push({ name: "foodInfo", params: { foodID: foodID } });
+      this.$router.push({ name: "foodInfo", params: { foodId: foodId } });
       // console.log("The id is: " + this.$route.params.foodID);
     }
   },
