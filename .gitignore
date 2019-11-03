@@ -18,3 +18,6 @@ Food Tabel/FoodTableBackend/.vs/FoodTableBackend/v16/Server/sqlite3/storage.ide
 Food Tabel/FoodTableBackend/.vs/FoodTableBackend/v16/.suo
 Food Tabel/FoodTableBackend/.vs/FoodTableBackend/DesignTimeBuild/.dtbcache
 Food Tabel/FoodTableBackend/.vs/FoodTableBackend/v16/.suo
+*.json
+adminmanager/.firebaserc
+adminmanager/.firebase/hosting.ZGlzdA.cache
