@@ -20,6 +20,11 @@ Girl camp live demo [Live Demo](https://girlcamp01.firebaseapp.com/#/).
 
 [Live Demo](https://vue-prod-3615c.firebaseapp.com/#/login?redirect=%2F)
 
+***Test bruker***
+
+Mail: test@test.no,
+Passord:test123
+
 **Coming:** 
 - More design
 - mobile-friendly design
