@@ -25,6 +25,7 @@ Girl camp live demo [Live Demo](https://girlcamp01.firebaseapp.com/#/).
 Mail: test@test.no,
 Passord:test123
 
+Man kan også opprette en egen bruker og teste appen på denne måten. 
 **Coming:** 
 - More design
 - mobile-friendly design
