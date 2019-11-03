@@ -18,9 +18,9 @@ Girl camp live demo [Live Demo](https://girlcamp01.firebaseapp.com/#/).
 
 [Adminmanager Code](https://github.com/JosefineFM/Portflio/tree/master/adminmanager)
 
-[Live Demo](https://josefinefm.github.io/#/)
+[Live Demo](https://vue-prod-3615c.firebaseapp.com/#/login?redirect=%2F)
 
 **Coming:** 
-- Login
+- More design
 - mobile-friendly design
 
