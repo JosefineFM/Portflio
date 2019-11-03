@@ -21,6 +21,6 @@ Girl camp live demo [Live Demo](https://girlcamp01.firebaseapp.com/#/).
 [Live Demo](https://vue-prod-3615c.firebaseapp.com/#/login?redirect=%2F)
 
 **Coming:** 
-- Login
+- More design
 - mobile-friendly design
 
