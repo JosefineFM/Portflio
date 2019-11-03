@@ -42,6 +42,7 @@ export default {
   name: "view-employee",
   data() {
     return {
+      currentUser: [],
       employee_id: null,
       name: null,
       dept: null,
@@ -49,6 +50,7 @@ export default {
       startDate: null
     };
   },
+
 
   beforeRouteEnter(to, from, next) {
     db.collection("employees")
@@ -61,7 +63,7 @@ export default {
             vm.name = doc.data().name;
             vm.dept = doc.data().dept;
             vm.position = doc.data().position;
-             vm.startDate = doc.data().startDate;
+            vm.startDate = doc.data().startDate;
           });
         });
       });
@@ -81,7 +83,7 @@ export default {
             this.name = doc.data().name;
             this.dept = doc.data().dept;
             this.position = doc.data().position;
-             this.startDate = doc.data().startDate;
+            this.startDate = doc.data().startDate;
           });
         });
     },

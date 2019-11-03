@@ -43,10 +43,12 @@
 </template>
 
 <script>
+import firebase from "firebase";
 import db from "../Firebase/firebaseInit";
 
 export default {
   name: "new-employee",
+   props: {currentUser: Array},
   data() {
     return {
       employee_id: null,
@@ -54,19 +56,29 @@ export default {
       dept: null,
       position: null,
       startDate: null,
+      currentUserId: ''
+
     };
   },
 
   methods: {
     saveEmployee() {
+      // console.log(this.currentUser)
+    const user_Uid = this.currentUser
+    const currentUser_uid = user_Uid.toString();
+    // console.log('currentUser_uid: ' + currentUser_uid)
+    // this.currentUserId.push(currentUser_uid);
+
       db.collection("employees")
         .add({
           employee_id: this.employee_id,
           name: this.name,
           dept: this.dept,
           position: this.position,
-          startDate: this.startDate
-        })
+          startDate: this.startDate,
+          uid: currentUser_uid
+
+          })
         .then(docRef => {
           this.$router.push("/");
         })
