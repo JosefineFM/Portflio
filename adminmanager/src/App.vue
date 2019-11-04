@@ -20,9 +20,9 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap');
 @import './assets/main.css';
-.main-container{
+/* .main-container{
   margin-left: 20px;
-}
+} */
   body{
      margin: 0;
       font-family: 'Be Vietnam', sans-serif;
