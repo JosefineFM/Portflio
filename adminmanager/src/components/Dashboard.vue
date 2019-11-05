@@ -72,7 +72,6 @@ export default {
 };
 </script>
 <style scoped>
-/* Img on the button on the page */
 .dashboard {
   padding: 0px 50px 0px 50px;
 }

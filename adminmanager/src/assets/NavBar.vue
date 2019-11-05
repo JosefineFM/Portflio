@@ -1,10 +1,7 @@
 <template>
   <nav>
     <div class="nav-wrapper">
-      <!-- <div class="container"> -->
-      <router-link to="/" class="brand-logo">Employeer Manager</router-link>
-      <ul class="right">
-        <li v-if="isLoggedIn"> <span>{{currentUser}}</span></li>
+      <ul>
         <li v-if="isLoggedIn">
           <router-link to="/">Dashboard</router-link>
         </li>
@@ -16,7 +13,13 @@
           <router-link to="/register">Register</router-link>
         </li>
         <li v-if="isLoggedIn">
-          <button @click="logout()" class="btn black">Logout</button>
+          <a @click="logout()">Logout</a>
+        </li>
+        <li class="userName" v-if="isLoggedIn">
+          <span>{{currentUser}}</span>
+        </li>
+        <li style="float:left">
+          <router-link to="/">Employeer Manager</router-link>
         </li>
       </ul>
     </div>
@@ -57,18 +60,36 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Be+Vietnam&display=swap");
 
 .nav-wrapper {
-  text-align: center;
   background-color: #049ff9;
   box-shadow: 0px 0px 9px #0425f9;
-  padding: 10px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+li {
+  float: right;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  word-spacing: 5px;
+}
+li a:hover:not(.active) {
+  background-color: #0425f9;
 }
 
-.brand-logo {
-  font-size: 25px;
-  text-decoration: none;
-  /* text-transform: uppercase; */
-  word-spacing: 5px;
-  padding-left: 10px;
+.userName {
   color: white;
+  padding-top: 14px;
+  font-size: 25px;
+  margin-right: 30%;
 }
 </style>>

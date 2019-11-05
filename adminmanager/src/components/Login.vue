@@ -1,15 +1,11 @@
 <template>
-  <div class="grid-container">
-    <div class="img-container">
-      <img src="../assets/img/loginImg.png" alt="LoginImg" />
-    </div>
-    <div class="login-container">
-      <h1>Login</h1>
+  <div>
+    <div>
       <form>
+        <h1>Login</h1>
         <div class="input-field">
           <img class="imgIcons" src="../assets/img/message.png" alt="Lock" />
           <input type="text" id="email" v-model="email" placeholder="Email" />
-          <!-- <label for="email">Email</label> -->
         </div>
         <div class="input-field">
           <img class="imgIcons" src="../assets/img/lock.png" alt="Lock" />
@@ -19,7 +15,6 @@
         <button @click="login(e)" class="button login">Login</button>
       </form>
     </div>
-    <!-- <div class="footer-container"></div> -->
   </div>
 </template>
 
@@ -68,42 +63,31 @@ export default {
 }
 
 input {
-   font-size: 20px;
-  width: 50%;
+  font-size: 20px;
+  width: 40%;
   padding: 10px;
   outline: none;
+  
 }
 .imgIcons {
   width: 40px;
   padding: 10px;
   background: dodgerblue;
   color: white;
-  min-width: 50px;
+  /* min-width: 50px; */
+    margin-top: 15%;
   text-align: center;
+  margin: 0;
 }
 img {
-  padding-top: 20px;
-  padding-left: 20px;
+  margin-top: 3%;
+  margin-left: 20px;
   width: 50vmax;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 60% auto;
-}
-
-.img-container {
-  /* border: solid black 1px; */
-  grid-column: 1;
-}
-
-.login-container {
-  /* border: solid red 1px; */
-  grid-column: 2;
-}
-
-.footer-container {
-  padding: 30px;
-  grid-column: 1 / span 2;
+form{
+  margin-left: 32%;
+    margin-top: 15%;
 }
 </style>

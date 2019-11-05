@@ -23,8 +23,10 @@ export default {
 /* .main-container{
   margin-left: 20px;
 } */
+* {
+  margin: 0;
+}
   body{
-     margin: 0;
       font-family: 'Be Vietnam', sans-serif;
   }
 </style>
