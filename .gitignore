@@ -21,3 +21,4 @@ Food Tabel/FoodTableBackend/.vs/FoodTableBackend/v16/.suo
 *.json
 adminmanager/.firebaserc
 adminmanager/.firebase/hosting.ZGlzdA.cache
+adminmanager/src/Firebase/firebaseConfig.js
