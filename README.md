@@ -28,6 +28,5 @@ Passord:test123
 Man kan også opprette en egen bruker og teste appen på denne måten. 
 
 **Coming:** 
-- mobile-friendly design
-- error messages
-
+- [ ] Error messages
+- [ ] Mobile-friendly design
