@@ -1,7 +1,5 @@
 # Min Portflio
 
-# Vue
-
 ## GirlCamp
 **Frontend:** Vue.js
 
