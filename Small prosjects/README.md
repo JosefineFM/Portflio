@@ -1,1 +1,1 @@
-test
+Small simple projects
