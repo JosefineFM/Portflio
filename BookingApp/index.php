@@ -18,12 +18,10 @@
 </div>
 
 <div class="col2">
-<img src="includes/imag/cabin1.jpg" alt="Cabin One">
-<p class="nigthText"> Night in the tree tops</p>
+<img src="includes/imag/cottageInTheWoods.png" alt="Cabin One">
 </div>
 
 <div class="col3">
-<p> If you are interested in a night just </p>
 <button class="bookUs" onclick="window.location.href='booking.php'"> Book It Now </button>
 </div>
 
@@ -33,6 +31,11 @@
 
 </body>
 <style>
-
+    img{
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    }
 </style>
 </html>
