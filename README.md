@@ -46,6 +46,6 @@ Databasen jeg bruker er hentet fra den norske matvaretabellen. Jeg la den inn i 
 **Database:** MySql
 
 ## Blackshop a Star Wars Project
-**Frontend: ** Vue.js
-**Backend: ** PHP
-**Database: ** MySql
+**Frontend:** Vue.js
+**Backend:** PHP
+**Database:** MySql
