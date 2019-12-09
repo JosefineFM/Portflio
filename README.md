@@ -40,3 +40,7 @@ Man kan også opprette en egen bruker og teste appen på denne måten.
 [**FoodTable Code**](https://github.com/JosefineFM/Portflio/tree/master/Food%20Tabel)
 
 Databasen jeg bruker er hentet fra den norske matvaretabellen. Jeg la den inn i sql server via en xlsx fil. 
+
+## BookingApp
+**Frontend & Backend:** PHP
+**Database:** MySql
