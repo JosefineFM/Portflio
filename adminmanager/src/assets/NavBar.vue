@@ -65,7 +65,6 @@ export default {
 }
 ul {
   list-style-type: none;
-  margin: 0;
   padding: 0;
   overflow: hidden;
   cursor: pointer;
@@ -92,4 +91,24 @@ li a:hover:not(.active) {
   font-size: 25px;
   margin-right: 30%;
 }
-</style>>
+
+@media (max-width: 1025px) {
+  .nav-wrapper {
+    max-width: 100%;
+    background-color: blueviolet;
+  }
+  .userName {
+    display: none;
+  }
+  li a {
+    font-size: 18px;
+    
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-wrapper {
+    background-color: red;
+  }
+}
+</style>

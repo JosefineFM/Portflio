@@ -56,9 +56,7 @@ export default {
   margin: 0;
 }
 .input-field {
-  display: -ms-flexbox; /* IE10 */
   display: flex;
-  width: 100%;
   margin-bottom: 15px;
 }
 
