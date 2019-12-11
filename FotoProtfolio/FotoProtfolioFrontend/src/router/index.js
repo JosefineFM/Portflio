@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import main from '@/components/main';
+import Index from "@/components/Index";
 
 import natur from '@/components/nature';
 import family from '@/components/family';
@@ -17,72 +17,71 @@ import firebase from 'firebase';
 Vue.use(Router);
 
 const router = new Router({
-  routes: [{
-      path: '/',
-      name: 'main',
-    component: main,
+  routes: [
+    {
+      path: "/",
+      name: "Index",
+      component: Index,
       meta: {
         requiresGuest: true
       }
-
     },
     {
-      path: '/natur',
-      name: 'natur',
-      component: natur,
+      path: "/natur",
+      name: "natur",
+      component: natur
       //meta: {
       //  requiresGuest: true
       //}
     },
     {
-      path: '/family',
-      name: 'family',
+      path: "/family",
+      name: "family",
       component: family,
       meta: {
         requiresGuest: true
       }
     },
     {
-      path: '/about',
-      name: 'about',
+      path: "/about",
+      name: "about",
       component: about,
       meta: {
         requiresGuest: true
       }
     },
     {
-      path: '/contact',
-      name: 'contact',
+      path: "/contact",
+      name: "contact",
       component: contact,
       meta: {
         requiresGuest: true
       }
     },
     {
-      path: '/adminLogin',
-      name: 'adminLogin',
+      path: "/adminLogin",
+      name: "adminLogin",
       component: adminLogin,
       meta: {
         requiresGuest: true
       }
     },
     {
-      path: '/admin',
-      name: 'admin',
+      path: "/admin",
+      name: "admin",
       component: admin,
-       meta: {
-         requiresAuth: true
-       }
+      meta: {
+        requiresAuth: true
+      }
     },
     {
-      path: '/edit/:name',
-      name: 'edit',
+      path: "/edit/:name",
+      name: "edit",
       component: edit,
       meta: {
         requiresAuth: true
       }
     }
-
   ]
 });
 
