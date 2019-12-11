@@ -1,0 +1,5 @@
+insert into Fotos ([Id]
+           ,[Image]
+           ,[Category]) 
+SELECT 'Id', BulkColumn, 'category' 
+FROM Openrowset( Bulk 'Your image', Single_Blob) as Image
