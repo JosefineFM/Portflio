@@ -2,13 +2,14 @@
   <div class="wrapper">
     <div class="main">
       <div id="body">
-        <!--:loop="true"-->
         <carousel :per-page="1" :autoplay="true" :autoplayTimeout="3000" :autoplayHoverPause="true">
           <slide>
-            <img id="carousel" src="https://localhost:44353/api/Image/1">
+            <img id="carousel" src="https://localhost:44353/api/Image/2">
+            <p>Natur</p>
           </slide>
           <slide>
-            <img id="carousel" src="/api/Image/3">
+            <img id="carousel" src="https://localhost:44353/api/Image/3">
+            <p>Natur</p>
           </slide>
         </carousel>
       </div>
