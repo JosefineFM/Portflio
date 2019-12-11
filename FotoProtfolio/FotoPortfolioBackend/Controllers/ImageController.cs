@@ -25,7 +25,7 @@ namespace FotoPortfolioBackend.Controllers
         public IActionResult GetById(int id)
         {
             var conn = new SqlConnection(_dbContext.ConnectionString);
-            var sql = "select Id, Image, Category from Fotos where Id = 1";
+            var sql = "select Id, Image, Category from Fotos where Id = @id";
             var param = new { id = id };
             var images = conn.Query<Foto>(sql, param);
             var image = images.FirstOrDefault();
