@@ -1,0 +1,14 @@
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/bin/Debug/netcoreapp2.2/fotoportfolio.deps.json
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/bin/Debug/netcoreapp2.2/fotoportfolio.runtimeconfig.json
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/bin/Debug/netcoreapp2.2/fotoportfolio.runtimeconfig.dev.json
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/bin/Debug/netcoreapp2.2/fotoportfolio.dll
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/bin/Debug/netcoreapp2.2/fotoportfolio.pdb
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/obj/Debug/netcoreapp2.2/fotoportfolio.csprojAssemblyReference.cache
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/obj/Debug/netcoreapp2.2/fotoportfolio.csproj.CoreCompileInputs.cache
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/obj/Debug/netcoreapp2.2/fotoportfolio.RazorAssemblyInfo.cache
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/obj/Debug/netcoreapp2.2/fotoportfolio.RazorAssemblyInfo.cs
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/obj/Debug/netcoreapp2.2/fotoportfolio.AssemblyInfoInputs.cache
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/obj/Debug/netcoreapp2.2/fotoportfolio.AssemblyInfo.cs
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/obj/Debug/netcoreapp2.2/fotoportfolio.RazorTargetAssemblyInfo.cache
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/obj/Debug/netcoreapp2.2/fotoportfolio.dll
+/Users/josefinemagnussen/Documents/Mine-Prosjekter-.net/fotoportfolio/fotoportfolio/obj/Debug/netcoreapp2.2/fotoportfolio.pdb

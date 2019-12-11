@@ -1,0 +1,40 @@
+button {
+  font-size: 16px;
+  padding: 12px 28px;
+  margin-top: 20px;
+  border-radius: 4px;
+  width: 250px;
+  background-color: #FF5733;
+  border: 1px solid white;
+  color: white;
+
+}
+  button:hover {
+    background-color: white;
+    border: 1px solid #FF5733;
+    color: #581845;
+  }
+input, textarea, select {
+  border: none;
+  border-bottom: 1px solid #FF5733;
+  width: 500px;
+  font-size: 20px;
+}
+input {
+  height: 30px;
+}
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border-bottom: 1px solid #FF5733;
+    -webkit-text-fill-color: black;
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }

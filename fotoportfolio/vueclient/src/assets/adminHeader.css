@@ -1,0 +1,31 @@
+header {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  padding-top: 8%;
+
+}
+
+.header__bg {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-image: linear-gradient(#FFC300, #FF5733 );
+  transform: skewY(-5deg);
+  transform-origin: top left;
+}
+
+header h1 {
+  position: relative;
+  color: white;
+  text-align: center;
+  font-size: 80px;
+}
+
+.body {
+  margin: 0;
+}
