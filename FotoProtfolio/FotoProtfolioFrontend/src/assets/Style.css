@@ -44,10 +44,7 @@
   font-size: 30px;
   padding-left: 10px;
 }
-/* .button-admin {
-  text-align: center;
-  padding-top: 30%;
-} */
+
 
 a:link {
   text-decoration: none;
@@ -88,4 +85,15 @@ a:visited {
 
     top: 0;
   }
+}
+
+/* NavBar */
+.Navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.NavbarLink{
+  display: inline;
 }

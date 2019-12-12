@@ -1,18 +1,8 @@
 <template>
   <div id="app">
-    <router-view @loggedin="loggedIn" @loggedut="loggedUt"/>
-    <div class="menu" v-if="!isLoggedIn">
-      <div class="link">
-        <!-- <img class="logo" src="/api/Image/2"> -->
+    <Navbar/>
+    <router-view/>
 
-        <router-link v-if="isLoggedIn" class="button" to="/natur">Natur</router-link>
-        <router-link v-if="!isLoggedIn" class="button" to="/natur">Natur</router-link>
-        <!-- <a href="#">Reklame - funker ikke</a>
-        <a href="#">Bedrifter - funker ikke</a>-->
-        <router-link v-if="!isLoggedIn" class="button" to="/family">Familie</router-link>
-        <router-link v-if="!isLoggedIn" class="button" to="/about">Om</router-link>
-        <router-link v-if="!isLoggedIn" class="button" to="/contact">Bestill time</router-link>
-      </div>
       <!-- <div class="sosialMedia">
         <p>Sosiale medier:</p>
         <a href="https://www.facebook.com/josefineblogg/" target="_blank">Facebook</a>
@@ -21,14 +11,18 @@
         
       </div> -->
       <!-- <router-link class="button-admin" to="/adminLogin">Admin</router-link> -->
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
 <script>
+import Navbar from '../src/components/Navbar'
 
 export default {
   name: "App",
+  components: {
+    Navbar
+  },
 
   data() {
     return {

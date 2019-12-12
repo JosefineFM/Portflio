@@ -53,10 +53,10 @@ export default {
 };
 </script>
 <style scoped>
-li {
+/* li {
   list-style: none;
   padding-top: 10px;
   padding-left: 20px;
   float: left;
-}
+} */
 </style>
