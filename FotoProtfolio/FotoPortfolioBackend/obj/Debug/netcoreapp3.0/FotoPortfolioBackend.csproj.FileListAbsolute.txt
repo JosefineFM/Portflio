@@ -247,10 +247,10 @@ C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\bin\
 C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\FotoPortfolioBackend.csprojAssemblyReference.cache
 C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\staticwebassets\FotoPortfolioBackend.StaticWebAssets.Manifest.cache
 C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\staticwebassets\FotoPortfolioBackend.StaticWebAssets.xml
-C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\FotoPortfolioBackend.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\FotoPortfolioBackend.AssemblyInfoInputs.cache
 C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\FotoPortfolioBackend.AssemblyInfo.cs
 C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\FotoPortfolioBackend.RazorTargetAssemblyInfo.cache
 C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\FotoPortfolioBackend.csproj.CopyComplete
 C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\FotoPortfolioBackend.dll
 C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\FotoPortfolioBackend.pdb
+C:\Users\josef\Documents\GitHub\Portflio\FotoProtfolio\FotoPortfolioBackend\obj\Debug\netcoreapp3.0\FotoPortfolioBackend.MvcApplicationPartsAssemblyInfo.cache
