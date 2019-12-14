@@ -33,6 +33,19 @@ namespace FotoPortfolioBackend
             services.AddSingleton(fotoContext);
 
             services.AddControllers();
+
+            //Enable CORS
+            services.AddCors(options =>
+            {
+                options.AddPolicy("VueCorsPolicy", build =>
+                {
+                    build
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials()
+                    .WithOrigins("http://localhost:8085");
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +55,8 @@ namespace FotoPortfolioBackend
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("VueCorsPolicy");
 
             app.UseHttpsRedirection();
 
