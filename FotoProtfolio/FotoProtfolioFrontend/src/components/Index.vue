@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="categoryOne">
-      <p>categoryOne</p>
+      <img src="https://localhost:44353/api/Image/3">
     </div>
     <div class="categoryTwo">
       <p>categoryTwo</p>
@@ -20,7 +20,7 @@ const axios = require("axios");
 
 export default {
   created: function(){
-    axios.get('https://localhost:44353/api/Image/1')
+    axios.get('https://localhost:44353/weatherforecast')
   .then(function (response) {
     // handle success
     console.log(response);
@@ -52,8 +52,8 @@ export default {
 }
 
 .categoryOne {
-  background: LightSkyBlue;
   grid-area: categoryOne;
+  
 }
 
 .categoryTwo {
@@ -72,4 +72,12 @@ export default {
   background: lightpink;
   grid-area: categoryFour;
 }
+
+img{
+  width: 80%;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 </style>
