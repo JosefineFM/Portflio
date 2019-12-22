@@ -20,6 +20,14 @@ namespace FotoPortfolioBackend.Controllers
         {
             _dbContext = dbContext;
         }
+
+        // GET: api/Default
+        [HttpGet]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "value1", "value2" };
+        }
+
         // GET: api/Image/7
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
