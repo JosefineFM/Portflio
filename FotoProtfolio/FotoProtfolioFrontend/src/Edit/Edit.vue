@@ -118,7 +118,6 @@ export default {
 </script>
 
 <style scoped>
-  @import "../assets/main.css";
   @import "../assets/adminHeader.css";
   input, textarea {
     padding-top: 30px;

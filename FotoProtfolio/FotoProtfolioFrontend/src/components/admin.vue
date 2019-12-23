@@ -89,7 +89,6 @@ export default {
 
 <style scoped>
 @import "../assets/adminHeader.css";
-@import "../assets/main.css";
   h1 {
     font-size: 38px;
   }

@@ -78,7 +78,6 @@
 
 </script>
 <style>
-  @import "../assets/main.css";
   
   .comments {
     padding-top: 20px;

@@ -43,7 +43,6 @@
 </script>
 
 <style>
-  @import "../assets/main.css";
  
   .login {
     width: 75%;
