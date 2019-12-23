@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Index from "@/components/Index";
 
-import natur from '@/components/nature';
+import Natur from '@/components/Nature';
 import family from '@/components/family';
 import contact from '@/components/contact';
 import about from '@/components/about';
@@ -27,9 +27,9 @@ const router = new Router({
       }
     },
     {
-      path: "/natur",
-      name: "natur",
-      component: natur
+      path: "/Natur",
+      name: "Natur",
+      component: Natur
       //meta: {
       //  requiresGuest: true
       //}

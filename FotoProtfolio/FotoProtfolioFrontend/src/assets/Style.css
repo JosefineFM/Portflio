@@ -1,6 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand:300,400");
+/* @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400"); */
 * {
-  /* background: #f1f3f6; */
   font-family: "Quicksand", sans-serif;
   margin: 0;
 }
@@ -97,3 +96,13 @@ a:visited {
 .NavbarLink{
   display: inline;
 }
+
+/*
+ * ─── NAVIMG ─────────────────────────────────────────────────────────────────────
+ */
+
+  .navImg{
+    height: 600px;
+    width: 350px;
+   
+  }
