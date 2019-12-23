@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="categoryOne">
-      <img src="https://localhost:44353/api/Image/3">
+        <router-link to="Natur">
+      <img align="right" class="navImg" src="../assets/Img/Nature.png">
+      </router-link>
     </div>
     <div class="categoryTwo">
       <p>categoryTwo</p>
@@ -11,6 +13,9 @@
     </div>
     <div class="categoryFour">
       <p>categoryFour</p>
+    </div>
+        <div class="categoryFive">
+      <p>categoryFive</p>
     </div>
   </div>
 </template>
@@ -37,6 +42,7 @@ export default {
 </script>
 
 <style scoped>
+@import "../assets/Style";
 .container {
   padding-top: 10%;
   font-size: 1.5em;
@@ -48,7 +54,8 @@ export default {
   grid-gap: 10px;
   grid-template-areas:
     "categoryOne categoryTwo"
-    "categoryThree categoryFour";
+    "categoryThree categoryFour"
+    "categoryFive categoryFive";
 }
 
 .categoryOne {
@@ -71,6 +78,12 @@ export default {
 .categoryFour {
   background: lightpink;
   grid-area: categoryFour;
+}
+
+.categoryFive{
+  grid-area: categoryFive;
+  background-color: lightcoral;
+  height: 100px;
 }
 
 img{
