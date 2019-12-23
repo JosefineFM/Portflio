@@ -11,19 +11,19 @@ namespace FotoPortfolioBackend.Controllers
     [ApiController]
     public class DefaultController : ControllerBase
     {
-        // GET: api/Default
+         //GET: api/Default
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET: api/Default/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //// GET: api/Default/5
+        //[HttpGet("{id}", Name = "Get")]
+        //public string Get(int id)
+        //{
+        //    return "value";
+        //}
 
         // POST: api/Default
         [HttpPost]
