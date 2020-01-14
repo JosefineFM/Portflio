@@ -29,16 +29,8 @@ namespace FotoPortfolioBackend.Controllers
         {
            var conn = new SqlConnection(_dbContext.ConnectionString);
            var sql = $"Select id, name, img, season, locationCountry, locationTown from natureImage";
-            //var images = conn.Query<natureImage>(sql);
-           //var image = images.FirstOrDefault();
 
-            return conn.Query<natureImage>(sql);
-            //if (image == null)
-            // {
-            //     return null;
-            // }
-
-            // return File(image.img, "image/jpeg");
+           return conn.Query<natureImage>(sql);
         }
 
         //// GET: api/natureImage/5
@@ -56,24 +48,6 @@ namespace FotoPortfolioBackend.Controllers
             }
 
             return File(image.img, "image/jpeg");
-        }
-
-        // POST: api/natureImage
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/natureImage/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }
