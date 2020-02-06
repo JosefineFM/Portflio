@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper">
-    <div class="main">
-      <router-link class="button" to="/">Tilbake</router-link>
+  <div class="container">
+      <router-link class="back" to="/">Tilbake</router-link>
+      <div class="contact">
       <h2>Bestilling</h2>
 
       <p>Legg gjerne igjen en bestilling. Eller send en melding for en uforplikted prat.</p>
@@ -31,10 +31,13 @@
       <input type="date" v-model="order.date" placeholder="Velg dato">
       <br>
       <br>
-      <button @click="onclick">Bestill</button>
-      <p>Du har bestilt {{order.price}} pakken! Datoen du har valgt for en prat er {{order.date}}. Jeg vil sende deg en mail i løpet av noen dager!</p>
+    
+      <p>Du har bestilt {{order.price}} pakken! Datoen du har valgt for en prat er {{order.date}}.</p>
+      <p>Jeg vil sende deg en mail i løpet av noen dager!</p>
+    <button @click="onclick">Bestill</button>
     </div>
-  </div>
+    </div>
+
 </template>
 <script>
 import db from "@/fb";
@@ -54,21 +57,15 @@ export default {
   methods: {
     onclick: function() {
       alert("Din bestilling er sendt!")
-      const project = this.order;
-
-      db.collection("order")
-        .add(project)
-        .then(() => {
-          console.log("added to db");
-        });
+     
     }
   }
 };
 </script>
 <style scoped>
+@import "../assets/Style.css";
 
-
-p {
-  font-size: 20px;
+.container{
+  margin: 40px;
 }
 </style>

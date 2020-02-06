@@ -21,24 +21,7 @@
 </template>
 
 <script>
-const axios = require("axios");
 
-export default {
-  created: function(){
-    axios.get('https://localhost:44353/weatherforecast')
-  .then(function (response) {
-    // handle success
-    console.log(response);
-  })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
-  .finally(function () {
-    // always executed
-  });
-  }
-};
 </script>
 
 <style scoped>
