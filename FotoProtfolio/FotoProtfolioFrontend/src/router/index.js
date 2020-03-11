@@ -1,17 +1,19 @@
-import Vue from 'vue';
-import Router from 'vue-router';
+import Vue from "vue";
+import Router from "vue-router";
 import Index from "@/components/Index";
 
-import Natur from '@/components/Nature';
-import family from '@/components/family';
-import contact from '@/components/contact';
-import about from '@/components/about';
-import edit from '../Edit/Edit.vue';
+import Natur from "@/components/Nature";
+import Contact from "@/components/Contact";
+import Work from "@/components/Work";
 
-import adminLogin from '@/components/adminLogin';
-import admin from '@/components/admin';
+import family from "@/components/family";
+import about from "@/components/about";
+import edit from "../Edit/Edit.vue";
 
-import firebase from 'firebase';
+import adminLogin from "@/components/adminLogin";
+import admin from "@/components/admin";
+
+import firebase from "firebase";
 
 // use router
 Vue.use(Router);
@@ -35,6 +37,24 @@ const router = new Router({
       //}
     },
     {
+      path: "/Contact",
+      name: "Contact",
+      component: Contact,
+      meta: {
+        requiresGuest: true
+      }
+    },
+
+    {
+      path: "/Work",
+      name: "Work",
+      component: Work,
+      meta: {
+        requiresGuest: true
+      }
+    },
+
+    {
       path: "/family",
       name: "family",
       component: family,
@@ -50,14 +70,7 @@ const router = new Router({
         requiresGuest: true
       }
     },
-    {
-      path: "/contact",
-      name: "contact",
-      component: contact,
-      meta: {
-        requiresGuest: true
-      }
-    },
+
     {
       path: "/adminLogin",
       name: "adminLogin",
@@ -92,7 +105,7 @@ router.beforeEach((to, from, next) => {
     if (!firebase.auth().currentUser) {
       // Go to login
       next({
-        path: 'adminLogin',
+        path: "adminLogin",
         query: {
           redirect: to.fullPath
         }
@@ -106,7 +119,7 @@ router.beforeEach((to, from, next) => {
     if (firebase.auth().currentUser) {
       // Go to login
       next({
-        path: '/',
+        path: "/",
         query: {
           redirect: to.fullPath
         }
@@ -115,7 +128,6 @@ router.beforeEach((to, from, next) => {
       // proceed to route
       next();
     }
-
   } else {
     // proceed to route
     next();
