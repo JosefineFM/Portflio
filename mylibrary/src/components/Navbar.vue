@@ -1,8 +1,13 @@
 <template>
   <div>
     <ul>
-      <li @click="login"><a href="">Login</a></li>
+      <li @click="login">
+          <router-link to="/library"> Login </router-link>
+      </li>
       <li v-if="isLoggedIn"><a href="">Ditt bibliotek</a></li>
+      <li @click="logout()">
+          <router-link to="/"> Logout </router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -18,6 +23,10 @@ export default {
   methods: {
     login: function () {
       this.isLoggedIn = true
+    },
+
+    logout: function () {
+      this.isLoggedIn = false
     }
   }
 }
