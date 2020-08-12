@@ -54,8 +54,3 @@ Databasen jeg bruker er hentet fra den norske matvaretabellen. Jeg la den inn i 
 ## BookingApp
 **Frontend & Backend:** PHP
 **Database:** MySql
-
-## Blackshop a Star Wars Project
-**Frontend:** Vue.js
-**Backend:** PHP
-**Database:** MySql
