@@ -1,5 +1,15 @@
 # Min Portflio
 
+
+## Thiccc Boyz Gaming 🎮 
+**Frontend:** HTML, CSS and JavaScript
+
+This is a page for a gaming crue that I know. 
+For now there is just a coming soon page. 
+
+[**The Code**](https://github.com/JosefineFM/ThicccBoyzGaming/tree/master) | 
+[**Live Page**](https://thicccboyzgaming.netlify.app/)
+
 ## GirlCamp
 **Frontend:** Vue.js
 
