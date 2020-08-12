@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+body{
+  font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    font-size: 18px;
+  }
+
+h1{
+    font-family: 'Oxygen', sans-serif;
+}
+
+.main{
+  padding-left: 10%;
+}
+
+.projects{
+  border: #402131 1.5px solid;
+  font-size: 18px;
+  border-radius: 1px;
+  padding: 10px;
+}
+.projects:hover{
+  border: #402131 1.5px solid;
+  background: #402131;
+  color: white;
+  transition: all .35s;
+}
+
+footer{
+  border: solid black 1px;
+}

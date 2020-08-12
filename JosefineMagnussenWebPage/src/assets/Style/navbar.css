@@ -1,0 +1,146 @@
+/* First and last name style */
+.navbar {
+  width: 100%;
+  padding-top: 20px;
+}
+
+.firstName {
+  cursor: pointer;
+  float: left;
+  color: #402131;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin: 0 5%;
+}
+
+.lastName {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #402131;
+  font-size: 30px;
+}
+
+/* Menu button a link */
+.menu {
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  float: right;
+  margin-right: 10%;
+  font-size: 25px;
+  width: 40px;
+  padding: 10px;
+  border: none;
+}
+.menuOpen {
+  cursor: pointer;
+  text-align: center;
+  float: right;
+  margin-right: 10%;
+  font-size: 25px;
+  width: 40px;
+  padding: 10px;
+  color: #402131;
+}
+
+.menu:hover {
+  transition: all 1s, border 0.5s;
+  font-weight: bold;
+}
+
+/* Overlay menu */
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  padding-top: 20px;
+  background-color: white;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay .link {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #402131;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay .link:hover {
+  color: #402131;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media only screen and (max-width: 800px) {
+  .navbar {
+    height: 100px;
+    width: 100%;
+    padding: 0;
+  }
+  .name {
+    margin: 0;
+    text-align: center;
+    color: #402131;
+    font-size: 30px;
+  }
+  .nameLast {
+    font-weight: bold;
+  }
+  .firstName {
+    display: none;
+  }
+
+  .lastName {
+    padding: 0px;
+    font-size: 25px;
+    margin: 0 0;
+    display: none;
+  }
+
+  .menu {
+    color: #402131;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+  }
+  .overlay {
+    padding: 0px;
+    background-color: white; 
+    color: #402131;
+  }
+  .overlay .link {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #402131;
+    display: block;
+    transition: 0.3s;
+  }
+  .menuOpen {
+    color: #402131;
+    font-size: 25px;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+  }
+}
