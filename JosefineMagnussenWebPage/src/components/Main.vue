@@ -4,8 +4,7 @@
       <img class="image" src="../assets/images/Josefine Magnussen.jpg" alt="Josefine Magnussen" />
     </div>
     <div class="grid-text">
-      <h2>Hei</h2>
-      <p>Mitt navn er Josefine.</p>
+      <p>Josefine Fevang Holth</p>
       <p>
         Jeg er en IT-Utvikler fra Larvik, Norge. For det meste bruker jeg tiden
         foran pc der jeg koder for det mest frontend men også en del backend.
@@ -39,7 +38,7 @@
           <router-link class="link" to="/Projects">
             <span @click="showNavbar = false">Eller se prosjektene mine her.</span>
           </router-link>
-        </div> -->
+        </div>-->
       </div>
       <div class="footer"></div>
     </div>
@@ -84,11 +83,10 @@ img {
 }
 
 p {
+  padding-top: 5%;
   line-height: 32px;
 }
-h2 {
-  padding-top: 5%;
-}
+
 ul {
   list-style-type: none;
 }
@@ -99,7 +97,6 @@ li {
   border-left: 2px solid #402131;
   height: 300px;
 }
-
 
 @media only screen and (max-width: 800px) {
   .footer {

@@ -4,45 +4,42 @@
   padding-top: 20px;
 }
 
-.firstName {
+.image {
   cursor: pointer;
   float: left;
-  color: #402131;
-  font-size: 30px;
-  text-transform: uppercase;
-  margin: 0 5%;
+  width: 75px; 
+  margin: 10px 0px 0px 30px;
 }
 
-.lastName {
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: bold;
-  color: #402131;
-  font-size: 30px;
-}
 
 /* Menu button a link */
-.menu {
-  font-weight: bold;
+.menuClose {
   cursor: pointer;
-  text-align: center;
-  border-radius: 5px;
   float: right;
   margin-right: 10%;
-  font-size: 25px;
-  width: 40px;
+  width: 75px;   
   padding: 10px;
-  border: none;
 }
-.menuOpen {
+
+.menuClose:hover {
+  transition: 0.70s;
+  -webkit-transition: 0.70s;
+  -moz-transition: 0.70s;
+  -ms-transition: 0.70s;
+  -o-transition: 0.70s;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.menu {
   cursor: pointer;
-  text-align: center;
   float: right;
   margin-right: 10%;
-  font-size: 25px;
-  width: 40px;
+  width: 75px; 
   padding: 10px;
-  color: #402131;
 }
 
 .menu:hover {
@@ -60,10 +57,11 @@
   left: 0;
   padding-top: 20px;
   background-color: white;
+  
 }
 
 .overlay-content {
-  position: relative;
+  padding-top: 20%;
   top: 25%;
   width: 100%;
   text-align: center;

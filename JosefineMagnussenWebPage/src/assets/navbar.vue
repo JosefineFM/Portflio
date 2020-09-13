@@ -1,14 +1,10 @@
 <template>
   <nav class="navbar">
-    <p @click="backToMain()" class="firstName">
-      Josefine
-      <span class="lastName">Magnussen</span>
-    </p>
-<img class="menu" src="../assets/images/menu.png" alt="Menu" @click="showNavbar = !showNavbar">
-      <!-- <a class="menu" @click="showNavbar = !showNavbar" >Menu</a> -->
+  <img @click="backToMain()" class="image" src="../assets/images/J.png" alt="Menu">
+<img class="menu" src="../assets/images/icons8-menu-240.png" alt="Menu" @click="showNavbar = !showNavbar">
 
     <div v-if="showNavbar" id="myNav" class="overlay">
-      <img class="menuOpen" @click="showNavbar = false" src="../assets/images/close.png" alt="Close">
+      <img class="menuClose" @click="showNavbar = false" src="../assets/images/icons8-delete-240.png" alt="Close">
       <!-- <a class="menuOpen" @click="showNavbar = false"> Close </a> -->
       <div class="overlay-content">
         <br />
