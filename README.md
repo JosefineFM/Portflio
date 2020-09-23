@@ -1,6 +1,14 @@
 # Min Portflio
 
 
+## My homepage
+**Frontend:** HTML, CSS and JavaScript, framwork Vue.js
+
+This is my portefolio home page. 
+
+[**The Code**](https://github.com/JosefineFH/JosefineMagnussenWebPage) | 
+[**Live Page**](https://josfineholth.tech/)
+
 ## Thiccc Boyz Gaming 🎮 
 **Frontend:** HTML, CSS and JavaScript
 
