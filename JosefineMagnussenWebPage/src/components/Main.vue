@@ -6,7 +6,7 @@
     <div class="grid-text">
       <p>Josefine Fevang Holth</p>
       <p>
-        Jeg er en IT-Utvikler fra Larvik, Norge. For det meste bruker jeg tiden
+        Jeg er en IT-Utvikler fra Larvik. For det meste bruker jeg tiden
         foran pc der jeg koder for det mest frontend men også en del backend.
         Jeg er altså en full-stack utvikler som er kreativ, nyskjerig og brenner
         for faget sitt.
