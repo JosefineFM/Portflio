@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/popupStyle.css">
     <title>Document</title>
 </head>
 
@@ -20,14 +21,14 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Shope</a>
+                        <a data-modal-target="#modal" href="#" class="nav__link">Shope</a>
                     </li>
                 </ul>
             </div>
 
             <!-- -------------------------------- Cart --------------------------------- -->
 
-            <div class="nav__shop">
+            <div data-modal-target="#modal" class="nav__shop">
                 <ion-icon name="basket-outline"></ion-icon><span id="cart-count"></span>
             </div>
         </nav>
@@ -60,18 +61,33 @@
 
         <!-- ----------------------------- News Letter ----------------------------- -->
 
-        <!-- ---------------------------- Popup window ----------------------------- -->
+        <!-- --------------------- Popup window Shopping Cart ---------------------- -->
 
+        <div class="modal" id="modal">
+            <div class="modal-header">
+                <div class="title">Example Modal</div>
+                <button data-close-button class="close-button">&times;</button>
+            </div>
+            <div class="modal-body">
+                This is in your shopping Cart
+            </div>
+        </div>
+        <div id="overlay"></div>
     </main>
+
+<!-- ----------------------- added to shopping cart ------------------------ -->
+<div id="result"></div>
 
 
     <!-- ------------------------------- footer -------------------------------- -->
     <!-- <img src="https://img.icons8.com/ios/50/000000/instagram-new.png"/>
             <img src="https://img.icons8.com/ios/50/000000/facebook-new.png"/>
             <img src="https://img.icons8.com/ios/50/000000/email.png"/> -->
+
+    <!-- ---------------------------- script files ----------------------------- -->
+
     <script src="assets/js/main.js"></script>
     <script src="assets/js/data.js"></script>
-
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </body>
 
