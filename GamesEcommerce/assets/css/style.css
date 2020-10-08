@@ -16,6 +16,7 @@
     --dark-color: #141414;
     --dark-color-light: #8a8a8a;
     --dark-color-lighten: #f2f2f2;
+    --sizzling-zunrise: #fddb3a;
     --white-color: #fff;
     /*===== Font and typography =====*/
     --body-font: 'Montserrat', sans-serif;
@@ -38,7 +39,7 @@
     --rotate-img: rotate(-30deg);
 }
 
-@media screen and(min-width: 768px) {
+@media screen and(min-width: 800px) {
     :root {
         --big-font-size: 1.5rem;
         --bigger-font-size: 2rem;
@@ -136,7 +137,7 @@ a{
     top: 0;
     left: 0;
     z-index: var(--z-index);
-    background-color: var(--dark-color-lighten);
+    background-color: var(--sizzling-zunrise)
 }
 
 /* -------------------------------------------------------------------------- */
@@ -264,7 +265,9 @@ a{
 .game:hover{
     transform: translateY(-.5rem);
 }
-
+.games__button{
+    margin-top: 1rem;
+}
 
 /* ------------------------------- Media query ------------------------------ */
 
