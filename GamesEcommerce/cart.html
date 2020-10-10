@@ -4,17 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 
-<body>
+<body onload="loadData()">
+     <!-- ------------------------------- Header -------------------------------- -->
+     <header class="l-header" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav__toggle" id="nav-toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
 
+            <a href="index.html" class="nav__logo">Game Shop</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a data-modal-target="#modal" href="#" class="nav__link">Shope</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- -------------------------------- Cart --------------------------------- -->
+
+            <div data-modal-target="#modal" class="nav__shop">
+                <a href="cart.html">
+                <ion-icon name="basket-outline">
+                </ion-icon><span id="cart-count"></span>
+            </a>
+            </div>
+        </nav>
+    </header>
+<h2>Cart</h2>
     <script>
-
+        console.log('cart page: ' + JSON.stringify(localStorage));
         // check the array for similar data
-
-        console.log('local storage saved data: ' + localStorage.gameIdArray)
+        // count duplicates in one array
+        // remove items in the cart
     </script>
+        <script src="assets/js/navbar.js"></script>
+        <script src="assets/js/data.js"></script>
+        <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </body>
 
 </html>
