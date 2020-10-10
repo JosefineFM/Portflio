@@ -17,7 +17,7 @@ function loadData() {
             
             for (i in gamesData) {
 
-                gameImg = gamesData[i].image;
+                let gameImg = gamesData[i].image;
                 let gameTitle = gamesData[i].title;
                 let gamePrice = gamesData[i].price;
                 let gameId = gamesData[i].id;
@@ -34,6 +34,11 @@ function loadData() {
         }
     }
     xhr.send();
+
+    var existingInLocalStorage = localStorage.getItem('gamesIdsArray');
+    var localStorageCount = Array.from(existingInLocalStorage.split(","))
+    
+    document.getElementById('cart-count').innerHTML = localStorageCount.length;
 }
 
 
@@ -50,6 +55,11 @@ function shoppingCart(gamesIds) { // Get the existing data
     localStorage.setItem('gamesIdsArray', existing.toString());
 
     document.getElementById('cart-count').innerHTML = cart++;
+
+    var existingInLocalStorage = localStorage.getItem('gamesIdsArray');
+    var localStorageCount = Array.from(existingInLocalStorage.split(","))
+
+    document.getElementById('cart-count').innerHTML = localStorageCount.length;
 }
 
 function readMore(gamesIds) { // Get the existing data
@@ -58,11 +68,8 @@ if (typeof(Storage) !== "undefined") {
     // Store
     sessionStorage.setItem("readMoreId", gamesIds);
   } 
+
+  location.replace("readMore.html")
 }
 
 /* --------------------- See what is in the shoppingCart -------------------- */
-
-function getAboutTheGame(){
-    console.log("readMore html: " + sessionStorage.getItem("readMoreId"));
-    document.getElementById("result").innerHTML = sessionStorage.getItem("readMoreId");
-}
