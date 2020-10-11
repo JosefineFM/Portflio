@@ -34,11 +34,7 @@
         <div class="contact-button">
           <a href="mailto:josefine.magnussen@hotmail.com" target="_top">Kontakt meg gjerne på mail</a>
         </div>
-        <!-- <div class="contact-button">
-          <router-link class="link" to="/Projects">
-            <span @click="showNavbar = false">Eller se prosjektene mine her.</span>
-          </router-link>
-        </div>-->
+<h3> Changes are coming!</h3>
       </div>
       <div class="footer"></div>
     </div>
