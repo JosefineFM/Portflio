@@ -38,9 +38,8 @@
 img {vertical-align: middle;}
 
 .slideshow__container{
-    max-width: auto;
     position: relative;
-    margin: auto;
+    grid-template-columns: repeat(minmax(320px, 1fr));
 }
 
 .slides{
