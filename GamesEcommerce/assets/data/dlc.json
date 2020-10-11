@@ -1,0 +1,14 @@
+
+[
+    {
+        "id": "1" ,
+        "title": "The Frozen Wilds expansion",
+        "price": "39.99$",
+        "image": "./assets/images/HorizenZeroDawn.jpg",
+        "dlc": "./assets/images/DLCimages/TheFrozenWilds.jpg", 
+        "publisher": "Sony Computer Entertainment",
+        "developer": "Guerrilla Games",
+        "releaseDate": "November 7, 2017" 
+    }
+      
+]

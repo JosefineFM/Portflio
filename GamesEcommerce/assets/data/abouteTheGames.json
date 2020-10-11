@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "title": "Horizen Zero Dawn™ Complete Edition",
+        "price": "39.99$",
+        "image": "./assets/images/HorizenZeroDawn.jpg",
+        "shop": "",
+        "dlc": "",
+        "genre": [
+            "Action",
+            "RPG"
+        ],
+        "developer": "Guerrilla Games",
+        "publisher": "Sony Computer Entertainment",
+        "releaseDate": "February 28, 2017"
+    },
+    {
+        "id": "2",
+        "title": "Dragon Age™ Inquisition",
+        "price": "39.99$",
+        "image": "./assets/images/DagonAgeInquisition.jpg",
+        "shop": "",
+        "dlc": "",
+        "genre": [
+            "Action",
+            "RPG"
+        ],
+        "developer": "BioWare",
+        "publisher": "Electronic Arts",
+        "releaseDate": "November 18, 2014"
+    }
+]
