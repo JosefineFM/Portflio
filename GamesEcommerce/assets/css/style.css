@@ -13,9 +13,9 @@
     --font-semi-bold: 600;
     --font--bold: 700;
     /* --------------------------------- Colors --------------------------------- */
-    --dark-color: #141414;
-    --dark-color-light: #8a8a8a;
-    --dark-color-lighten: #f2f2f2;
+    --dark-color: #41444B;
+    --dark-color-light: #52575D;
+    --dark-color-lighten: #eeeeee;
     --sizzling-zunrise: #fddb3a;
     --white-color: #fff;
     /*===== Font and typography =====*/
@@ -155,7 +155,7 @@ a{
 
 @media screen and (max-width: 800px){
     .nav__menu{
-        z-index: 1;
+        z-index: 0;
         position: fixed;
         top: var(--header-height);
         left: -100%;
@@ -193,27 +193,13 @@ a{
     height: calc(90vh - var(--header-height));
 }
 
-.home__sneaker{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-}
-
-.home__shape{
-    width: 220px;
-    height: 220px;
-    background-color: var(--dark-color);
-    border-radius: 50%;
-}
 .home__img{
     position: absolute;
     top: 1.5rem;
     max-width: initial;
     width: 275px;
-    transform: var(--rotate-img);
-}
-.home__new{
+} 
+ .home__new{
     display: block;
     font-size: var(--smaller-font-size);
     font-weight: var(--font-semi-bold);
@@ -226,12 +212,15 @@ a{
 }
 .home__description{
     margin-bottom: var(--mb-6)
-}
+} 
+
+/* ---------------------------------- Home ---------------------------------- */
+
 
 /* -------------------------------- featured -------------------------------- */
 .featured__container{
     row-gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 .game{
     margin: 20px;
@@ -240,13 +229,13 @@ a{
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    background-color: var(--dark-color-lighten);
+    filter: drop-shadow(0 12px 8px rgb(0,0,0,.1));
     border-radius: .5rem;
     transition: .3s;
 }
 
 .game__img{
-    width: 220px;
+    width: 400px;
     margin-top: var(--mb-3);
     margin-bottom: var(--mb-6);
     filter: drop-shadow(0 12px 8px rgb(0,0,0,.2));
@@ -255,6 +244,7 @@ a{
     font-size: var(--h2-font-size);
     letter-spacing: .1rem;
     font-weight: var(--font--bold);
+    text-align: center;
 }
 .game__name{
     margin-bottom: var(--mb-1);
@@ -266,7 +256,82 @@ a{
     transform: translateY(-.5rem);
 }
 .games__button{
+    width: 120px;
     margin-top: 1rem;
+    border: none;
+    background-color: var(--sizzling-zunrise);
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+/* ------------------------------- newsletter ------------------------------- */
+.newsletter__container{
+    background-color: #fddb3a;
+    color:var(--dark-color);
+    padding: 2rem .5rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+.newsletter__title{
+    font-size: var(--bigger-font-size);
+    margin-bottom: var(--mb-2);
+}
+
+.newsletter__description{
+    margin-bottom: var(--mb-5);
+}
+.newsletter__subscribe{
+    display: flex;
+    column-gap: .5rem;
+    background-color: var(--white-color);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+.newsletter__input{
+    outline: none;
+    border: none;
+    width: 90%;
+    font-size: var(--normal-font-size);
+}
+
+.newsletter__input::placeholder{
+    color: var(--dark-color);
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+/* --------------------------------- footer --------------------------------- */
+.footer__container{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.footer__box{
+    margin-bottom: var(--mb-4);
+}
+.footer__title{
+    font-size: var(--big-font-size);
+}
+.footer__link{
+    display: block;
+    width: max-content;
+    margin-bottom: var(--mb-1);
+}
+.footer__social{
+    display: flex;
+    font-size: 1.5rem;
+    margin-right: 1.25rem;
+    float: left;
+    width: 20%;
+    padding: 5px;
+    align-content: center;
+    position: relative;
+    left: 25%;
+}
+.footer__copy{
+    padding-top: 3rem;
+    font-size: var(--smaller-font-size);
+    color: var(--dark-color-light);
+    text-align: center;
 }
 
 /* ------------------------------- Media query ------------------------------ */
