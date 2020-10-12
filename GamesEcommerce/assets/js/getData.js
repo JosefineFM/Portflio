@@ -26,7 +26,8 @@ function loadData() {
                 let gamefeatured = gamesData[i].featured;
                 let topGames = gamesData[i].topGames;
                 let newGames = gamesData[i].newGame;
-                let gameTitle = gamesData[i].title;
+                let gameRelease = gamesData[i].release;
+                
 
                 if(gamefeatured === 1){
                     output += ' <article class="game">' + 
@@ -43,9 +44,9 @@ function loadData() {
                 }
                 
                 if(newGames === 1) {
-                    console.log(gameTitle)
                     outputNewGames += ' <article class="game">' + 
                     ' <img src="' + gameImg + '" alt="" class="game__img"></img>' +
+                    ' <span class="game__price"> Release: '  + gameRelease + '</span>' + 
                     ' <span class="game__price">' + gamePrice + '</span>' + 
                     '<button class="button-light games__button" onclick="readMore( ' + gameId + ')"">Red More</button>' + '</article>'
                 }
