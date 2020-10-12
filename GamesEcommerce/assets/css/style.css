@@ -107,7 +107,7 @@ a{
 .section__title::after{
     content: '';
     position: absolute;
-    width: 56px;
+    width: 200px;
     height: .18rem;
     top: -1rem;
     left: 0;
@@ -358,11 +358,10 @@ a{
         align-items: center;
     }
     .nav__link{
-        padding-left: var(--mb-4);
+        margin: 20px;
     }
 
     .nav__item{
-        margin-left: var(--mb-6);
         margin-bottom: 0;
     }
     .nav__toggle{
@@ -372,7 +371,7 @@ a{
         padding: 7rem 0 3rem;
     }
     .section-title::after{
-        width: 76px;
+        width: 100px;
     }
     .footer__container{
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
