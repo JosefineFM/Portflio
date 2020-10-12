@@ -1,5 +1,13 @@
 # Min Portflio
 
+## Game Shop, where to by your new game
+### E-commerce page
+**Frontend:** HTML, CSS and JavaScript,
+
+This is my portefolio home page. 
+
+[**The Code**](https://github.com/JosefineFH/Portflio/tree/master/GamesEcommerce) | 
+[**Live Page**](https://ecommercegames.netlify.app)
 
 ## My homepage
 **Frontend:** HTML, CSS and JavaScript, framwork Vue.js
