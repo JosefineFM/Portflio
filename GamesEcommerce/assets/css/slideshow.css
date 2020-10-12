@@ -131,3 +131,13 @@ img {vertical-align: middle;}
     from {opacity: .4}
     to {opacity: 1}
   }
+  @media screen and (min-width: 805px){
+    .slideshow__container{
+      width: calc(100% -2rem);
+      max-width: 1024px;
+      margin-left: auto;
+      margin-right: auto;
+
+margin-top: 70px;
+  }
+}
