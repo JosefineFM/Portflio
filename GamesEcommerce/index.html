@@ -15,7 +15,7 @@
     <header class="l-header" id="header">
         <nav class="nav bd-grid">
             <div class="nav__toggle" id="nav-toggle">
-                <ion-icon name="menu-outline"></ion-icon>
+                <ion-icon onclick="showMenu()"  name="menu-outline"></ion-icon>
             </div>
 
             <a href="#" class="nav__logo">Game Shop</a>
@@ -23,9 +23,10 @@
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Shope</a>
-                        <a href="#" class="nav__link">DLC</a>
-
+                        <a href="shop.html" class="nav__link">Shope</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="dlc.html" class="nav__link">DLC</a>
                     </li>
                 </ul>
             </div>
@@ -33,7 +34,7 @@
             <!-- -------------------------------- Cart --------------------------------- -->
 
             <div class="nav__shop">
-                <a href="cart.html">
+                <a href="shopingCart.html">
                     <ion-icon name="basket-outline">
                     </ion-icon><span id="cart-count"></span>
                 </a>
@@ -70,7 +71,7 @@
         </section>
 
         <!-- ------------------------------ Featured ------------------------------- -->
-        <section class="featured section" id="featured">
+        <section class="featured section">
             <h2 class="section__title">Featured</h2>
             <div id="game" class="featured__container bd-grid">
 
@@ -132,8 +133,8 @@
             <div class="footer__box">
                 <h3 class="footer__title">EXPLORE</h3>
                 <ul>
-                    <li><a href="#" class="footer__link">Shop</a></li>
-                    <li><a href="#" class="footer__link">DLC</a></li>
+                    <li><a href="shop.html" class="footer__link">Shop</a></li>
+                    <li><a href="dlc.html" class="footer__link">DLC</a></li>
                 </ul>
             </div>
     
@@ -161,6 +162,7 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/getData.js"></script>
+    <script src="assets/js/shoppingCart.js"></script>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </body>
 

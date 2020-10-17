@@ -7,7 +7,6 @@
 /* -------------------------------------------------------------------------- */
 
 :root {
-    --header-height: 3rem;
     /* ------------------------------- font Weight ------------------------------ */
     --font-medium: 500;
     --font-semi-bold: 600;
@@ -49,11 +48,11 @@
     }
 }
 
-/* -------------------------------------------------------------------------- */
 
-/*                                    base                                    */
 
-/* -------------------------------------------------------------------------- */
+/* ---------------------------------- Base ---------------------------------- */
+
+
 
 *, ::before, ::after {
     box-sizing: border-box;
@@ -115,11 +114,11 @@ a{
     margin: auto;
     background-color: var(--dark-color);
 }
-/* -------------------------------------------------------------------------- */
 
-/*                                   Layout                                   */
 
-/* -------------------------------------------------------------------------- */
+/* --------------------------------- Layout --------------------------------- */
+
+
 
 .bd-grid {
     max-width: 1024px;
@@ -137,17 +136,16 @@ a{
     top: 0;
     left: 0;
     z-index: var(--z-index);
-    background-color: var(--sizzling-zunrise)
+    background-color: var(--sizzling-zunrise);
+    height:70px;
 }
 
-/* -------------------------------------------------------------------------- */
 
-/*                                     nav                                    */
+/* ----------------------------------- Nav ---------------------------------- */
 
-/* -------------------------------------------------------------------------- */
 
 .nav{
-    height: var(--header-height);
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -165,17 +163,19 @@ a{
         transition: .5s;
     }
 }
-
 .nav__item{
     margin-bottom: var(--mb-4);
 }
-
 .nav__logo{
     font-weight: var(--font-semi-bold);
 }
 .nav__toggle, .nav__shop{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
+}
+/*Show menu*/
+.show{
+    left: 0;
 }
 
 /* -------------------------------- Show menu ------------------------------- */
@@ -262,6 +262,11 @@ a{
     font-size: 14px;
     padding: 10px 15px;
 }
+.aboutTheGame{
+    font-size: var(--normal-font-size);
+    
+    letter-spacing: .1rem;
+}
 
 /* ------------------------------- newsletter ------------------------------- */
 .newsletter__container{
@@ -301,9 +306,11 @@ a{
 }
 
 /* --------------------------------- footer --------------------------------- */
-
+.footer{
+    padding-left: 10px;
+}
 .footer__box{
-    margin-bottom: var(--mb-4);
+    margin-bottom: var(--mb-5);
 }
 .footer__title{
     font-size: var(--big-font-size);
@@ -331,37 +338,76 @@ a{
     text-align: center;
 }
 
-/* ------------------------------- Media query ------------------------------ */
-@media screen and (max-width: 805px){
-    .nav__menu{
-        z-index: 0;
-        position: fixed;
-        top: var(--header-height);
-        left: -100%;
-        width: 0;
-        height: 100%;
-        padding: 2rem;
-        transition: .5s;
-    }
+/* ----------------------------- About The Game ----------------------------- */
+
+.game{
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    filter: drop-shadow(0 12px 8px rgb(0,0,0,.1));
+    border-radius: .5rem;
+    transition: .3s;
 }
 
-@media screen and (min-width: 805px){
+.aboutTheGame__img{
+    width: 400px;
+    margin-top: var(--mb-3);
+    margin-bottom: var(--mb-6);
+    filter: drop-shadow(0 12px 8px rgb(0,0,0,.2));
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.game__name,.game__price{
+    font-size: var(--h2-font-size);
+    letter-spacing: .1rem;
+    font-weight: var(--font--bold);
+    text-align: center;
+}
+.game__name{
+    margin-bottom: var(--mb-1);
+}
+.game__price{
+    margin-bottom: var(--mb-4);
+}
+.game:hover{
+    transform: translateY(-.5rem);
+}
+.games__button{
+    width: 120px;
+    margin-top: 5rem;
+    border: none;
+    background-color: var(--sizzling-zunrise);
+    font-size: 14px;
+    padding: 10px 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aboutTheGame{
+    font-size: var(--normal-font-size);
+    
+    letter-spacing: .1rem;
+}
+
+/* ------------------------------- Media query ------------------------------ */
+
+
+@media screen and (min-width: 768px){
     .nav{
         height: calc(var(--header-height) + 1.5rem);
     }
     .nav__menu{
         margin-left: auto;
-        margin-right: auto;
     }
     .nav__list{
         display: flex;
-        align-items: center;
     }
-    .nav__link{
-        margin: 20px;
-    }
-
     .nav__item{
+        margin-left: var(--mb-6);
         margin-bottom: 0;
     }
     .nav__toggle{
@@ -392,17 +438,7 @@ a{
     .collection__container{
         grid-template-columns: repeat(2, 415px);
     }
-    .new__container{
-        grid-template-columns: max-content 1fr;
-    }
-    .new__mens{
-        align-items: initial;
-        justify-content: flex-end;
-        padding: 4rem 2rem;
-    }
-    .new__mens-img{
-        margin-bottom: var(--mb-6);
-    }
+
     .game__img{
         max-width: 150%;
     }

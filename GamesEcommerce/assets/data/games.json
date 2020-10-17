@@ -1,6 +1,6 @@
 [
     {
-        "id": 1 ,
+        "id": "1" ,
         "title": "Horizon Zero Dawn - Complete Edition",
         "price": "20.99$",
         "image": "./assets/images/HorizenZeroDawn.jpg",
@@ -9,7 +9,7 @@
         "newGame": 0
     },
     {
-        "id": 2 ,
+        "id": "2" ,
         "title": "Dragon Age Inquisition",
         "price": "35.99$",
         "image": "./assets/images/DagonAgeInquisition.jpg",
@@ -18,7 +18,7 @@
         "newGame": 0
     },
     {
-        "id": 3 ,
+        "id": "3" ,
         "title": "Destiny 2",
         "price": "59.99$",
         "image": "./assets/images/destiny2.jpg",
@@ -27,7 +27,7 @@
         "newGame": 0
     },
     {
-        "id": 4 ,
+        "id": "4" ,
         "title": "Assassins Creed Odyssey",
         "price": "39.99$",
         "image": "./assets/images/AssassinsCreedOdyssey.jpg",
@@ -36,7 +36,7 @@
         "newGame": 0        
     },
     {
-        "id": 5 ,
+        "id": "5" ,
         "title": "The Witcher 3: Wild Hunt",
         "price": "39.99$",
         "image": "./assets/images/TheWitcher3-WildHunt.jpg",
@@ -46,7 +46,7 @@
 
     },
     {
-        "id": 6 ,
+        "id": "6" ,
         "title": "Star Wars Jedi: Fallen Order",
         "price": "53.99$",
         "image": "./assets/images/StarWarsJedi-Fallen Order.jpg",
@@ -56,7 +56,7 @@
     },
 
     {
-        "id": 7 ,
+        "id": "7" ,
         "title": "Cyberpunk 2077",
         "price": "59.99$",
         "image": "./assets/images/Cyberpunk2077.jpg",
@@ -66,7 +66,7 @@
         "newGame": 1
     },
     {
-        "id": 8 ,
+        "id": "8" ,
         "title": "Horizon Forbidden West",
         "price": "59.99$",
         "image": "./assets/images/Horizon-forbidden-west.jpg",
@@ -76,7 +76,7 @@
         "newGame": 1
     },
     {
-        "id": 9 ,
+        "id": "9" ,
         "title": "Assassins Creed Valhalla",
         "price": "59.99$",
         "image": "./assets/images/AssassinsCreedValhalla.jpg",

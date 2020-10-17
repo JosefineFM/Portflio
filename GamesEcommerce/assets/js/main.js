@@ -1,5 +1,5 @@
 let cart = 1;
-var gamesIds = [];
+var gamesId = [];
 var gameId = "";
 
 
@@ -8,44 +8,45 @@ var gameId = "";
 /* -------------------------------------------------------------------------- */
 
 const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+  const toggle = document.getElementById(toggleId),
+  nav = document.getElementById(navId)
 
-    if (toggle && nav) {
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-            document.getElementById('nav-menu').style.width = "100%";
-        })
-    }
+  if (toggle && nav) {
+      toggle.addEventListener('click', ()=>{
+          nav.classList.toggle('show')
+      })
+  }
 }
 
 showMenu('nav-toggle', 'nav-menu')
 
-function shoppingCart(gamesIds) { // Get the existing data
-    var existing = localStorage.getItem('gamesIdsArray', gamesIds);
+function shoppingCart(gamesId) { // Get the existing data
+    
+
+    var existing = localStorage.getItem('shoppingCartArray', gamesId);
     // If no existing data, create an array
     // Otherwise, convert the localStorage string to an array
     existing = existing ? existing.split(',') : [];
 
     // Add new data to localStorage Array
-    existing.push(gamesIds);
+    existing.push(gamesId);
 
     // Save back to localStorage
-    localStorage.setItem('gamesIdsArray', existing.toString());
+    localStorage.setItem('shoppingCartArray', existing.toString());
 
     document.getElementById('cart-count').innerHTML = cart++;
 
-    var existingInLocalStorage = localStorage.getItem('gamesIdsArray');
+    var existingInLocalStorage = localStorage.getItem('shoppingCartArray');
     var localStorageCount = Array.from(existingInLocalStorage.split(","))
 
     document.getElementById('cart-count').innerHTML = localStorageCount.length;
 }
 
-function readMore(gamesIds) { // Get the existing data
+function readMore(gamesId) { // Get the existing data
     // Check browser support
 if (typeof(Storage) !== "undefined") {
     // Store
-    sessionStorage.setItem("readMoreId", gamesIds);
+    sessionStorage.setItem("readMoreId", gamesId);
   } 
 
   location.replace("readMore.html")
