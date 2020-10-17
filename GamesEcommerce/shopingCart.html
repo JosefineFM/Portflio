@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Game Shop</title>
+</head>
+
+<body onload="loadShoppingCart(); plus();">
+    <!-- ------------------------------- Header -------------------------------- -->
+    <header class="l-header" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav__toggle" id="nav-toggle">
+                <ion-icon onclick="showMenu()" name="menu-outline"></ion-icon>
+            </div>
+
+            <a href="index.html" class="nav__logo">Game Shop</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Shope</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="dlc.html" class="nav__link">DLC</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- -------------------------------- Cart --------------------------------- -->
+
+            <div class="nav__shop">
+                <a href="shopingCart.html">
+                    <ion-icon name="basket-outline">
+                    </ion-icon><span id="cart-count"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- -------------------------------- main --------------------------------- -->
+    <main>
+        <section class="featured section">
+            <h2>Cart</h2>
+            <!-- <div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div> -->
+            <div class="modal-body">
+                <table id="show-cart" class="show-cart table">
+
+                </table>
+                <!-- <div>Total price: $<span class="total-cart"></span></div> -->
+            </div>
+            <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Order now</button>
+                        </div> -->
+            </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/assets/js/shoppingCart.js"></script>
+
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</body>
+
+</html>
