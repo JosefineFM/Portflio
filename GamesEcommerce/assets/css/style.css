@@ -378,7 +378,7 @@ a{
     transform: translateY(-.5rem);
 }
 .games__button{
-    width: 120px;
+    width: 125px;
     margin-top: 5rem;
     border: none;
     background-color: var(--sizzling-zunrise);
