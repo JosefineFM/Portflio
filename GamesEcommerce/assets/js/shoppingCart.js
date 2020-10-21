@@ -1,93 +1,96 @@
-var gameId
-var current = null;
-var cnt = 0;
-var gamesId = [];
+var id;
+var result
+var cart;
+let gameTitle;
+cart;
 
 function loadShoppingCart() {
-    existing = localStorage.getItem('shoppingCartArray');
-    console.log(existing)
-    existing = existing ? existing.split(',') : [];
-    existing.sort();
+    cart = JSON.parse(localStorage.getItem('shoppingCartItems'))
 
-    let output = '';
+    if (!Array.isArray(cart) || ! cart.length) {
+        console.log("test")
+    } else {
 
-    const xhr = new XMLHttpRequest();
+        cart.sort((a, b) => (a.id > b.id) ? 1 : -1)
+        document.getElementById('cart-count').innerHTML = cart.length;
 
-    xhr.open('GET', 'assets/data/games.json', true);
 
-    xhr.onload = function (gameId) {
-        if (this.status == 200) {
-            let gamesData = JSON.parse(this.responseText)
-            console.log(gamesData)
-            for (i in gamesData) {
-                var gameId = gamesData[i].id;
-                let gameTitle = gamesData[i].title;
+        let output = '';
 
-                for (var i = -1; i < existing.length; i++) {
-                    if (existing[i] != current) {
-                        if (cnt > -1) {
-                            if (gameId === current) {
-                                output += ' <article class="game">' + ' <span class="game__title">' + gameTitle + '</span>' + '<button onclick="plus(' + gameId + ')">+</button>' + '<span>' + cnt + '</span>' + '<button onclick="minus(' + gameId + ')">-</button>' + '</article>'
 
-                            }
+        result = [... cart.reduce(
+                (mp, o) => {
+                    if (!mp.has(o.title)) 
+                        mp.set(o.title, {
+                            ...o,
+                            count: 0
+                        });
+                    
 
-                        }
-                        current = existing[i];
-                        cnt = 1;
-                    } else {
-                        cnt++;
-                    }
-                }
-            }
-            document.getElementById('show-cart').innerHTML = output;
 
+                    mp.get(o.title).count ++;
+                    return mp;
+                },
+                new Map
+            ).values()];
+
+
+        for (var i in result) {
+            gameTitle = result[i].title;
+            id = result[i].id;
+            count = result[i].count;
+
+            output += '<p>' + gameTitle + '</p>' + '<button onclick="pluss( \'' + id + '\',\'' + gameTitle + '\')"">+</button>' + '<p>' + count + '</p>' + '<button onclick="minus(  \'' + id + '\',\'' + gameTitle + '\')"">-</button>'
         }
+        document.getElementById('show-cart').innerHTML = output;
 
-    }
-    xhr.send();
-
-}
-
-function plus(gameId) {
-    var existing = localStorage.getItem('shoppingCartArray', gameId);
-
-    for (var i = 0; i < existing.length; i++) {
-        if (existing[i] != current) {
-            if (cnt > 0) {
-
-                if (current == gameId) {
-                    existing = existing ? existing.split(',') : [];
-                    existing.push(gameId.toString());
-                    localStorage.setItem('shoppingCartArray', existing);
-                    window.location.reload();
-                }
-
-            }
-            current = existing[i];
-            cnt = 1;
-        } else {
-            cnt++;
-        }
-
+        localStorage.setItem('shoppingCartItems', JSON.stringify(cart));
     }
 }
 
-var existing = localStorage.getItem('shoppingCartArray');
+function pluss(id, gameTitle) {
+    var cart = JSON.parse(localStorage.getItem('shoppingCartItems')) || [];
 
-function minus(gameId) {
-    var gamesId = gameId + "";
-    var findIndexOf = existing.indexOf(gamesId);
-    existing.splice(findIndexOf,  1);
-    
-    
+    let items = {
+        id: id,
+        title: gameTitle
+    };
 
-    localStorage.setItem('shoppingCartArray', existing);
+    cart = [];
+
+    // Parse the serialized data back into an aray of objects
+    cart = JSON.parse(localStorage.getItem('shoppingCartItems')) || [];
+
+    cart.sort((a, b) => (a.id > b.id) ? 1 : -1)
+
+    // Push the new data (whether it be an object or anything else) onto the array
+    cart.push(items);
+
+    // Re-serialize the array back into a string and store it in localStorage
+    localStorage.setItem('shoppingCartItems', JSON.stringify(cart));
 
     window.location.reload();
-
-
-    // finde the index of
 }
-// remove from localStorage
-// add to cart
-// remove from cart
+
+function minus(id, gameTitle) {
+    cart = JSON.parse(localStorage.getItem('shoppingCartItems')) || [];
+
+    for (var i in cart) {
+
+        if (id == cart[i].id || cart[i].title == gameTitle) {
+            cart.findIndex(i => i.id === gameTitle);
+            console.log(i)
+            cart.splice(i, 1);
+            break;
+        }
+    }
+    localStorage.setItem('shoppingCartItems', JSON.stringify(cart));
+
+    window.location.reload();
+}
+
+function clearCart() {
+    localStorage.removeItem('shoppingCartItems');
+    window.location.reload();
+
+}
