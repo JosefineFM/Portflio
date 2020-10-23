@@ -55,4 +55,22 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+}
+
+function readAboutAllDlcs(){
+  sessionStorage.removeItem('readMoreAboutDLC');
+
+  location.replace("dlc.html")
+}
+
+function readMoreAboutDLC(dlcId) { 
+  console.log(dlcId)
+  // Check browser support
+  if (typeof(Storage) !== "undefined") {
+    // Store
+    sessionStorage.setItem("readMoreAboutDLC", dlcId);
+  } 
+
+  location.replace("dlc.html")
 }
