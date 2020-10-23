@@ -406,6 +406,7 @@ a{
     }
     .nav__list{
         display: flex;
+        cursor: pointer;
     }
     .nav__item{
         margin-left: var(--mb-6);

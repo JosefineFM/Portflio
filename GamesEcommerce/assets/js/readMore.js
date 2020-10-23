@@ -1,8 +1,11 @@
 function getAboutTheGame() {
-    var existingInLocalStorage = localStorage.getItem('shoppingCartArray');
-    var localStorageCount = Array.from(existingInLocalStorage.split(","))
+    cart = JSON.parse(localStorage.getItem('shoppingCartItems'));
+    document.getElementById('cart-count').innerHTML = cart.length;
+    
+    console.log("running funtion")
+    var existingInLocalStorage = sessionStorage.getItem('readMoreId');
+    console.log(existingInLocalStorage);
 
-    document.getElementById('cart-count').innerHTML = localStorageCount.length;
     
     var gamesId = sessionStorage.getItem("readMoreId"); 
 
@@ -12,6 +15,7 @@ function getAboutTheGame() {
     xhr.onload = function() {
         if(this.status == 200) {
             let gamesData = JSON.parse(this.responseText) 
+            console.log(gamesData)
             let output = '';
 
             
@@ -42,18 +46,5 @@ function getAboutTheGame() {
         }
     }
     xhr.send();
-    // console.log("readMore html: " + JSON.parse(gamesId));
+    console.log("readMore html: " + JSON.parse(gamesId));
 }
-
-const showMenu = (toggleId, navId) => {
-    const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
-  
-    if (toggle && nav) {
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
-    }
-  }
-  
-  showMenu('nav-toggle', 'nav-menu')

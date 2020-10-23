@@ -10,7 +10,7 @@
     <title>Game Shop</title>
 </head>
 
-<body onload="loadData()">
+<body onload="loadData(); dlc();">
     <!-- ------------------------------- Header -------------------------------- -->
     <header class="l-header" id="header">
         <nav class="nav bd-grid">
@@ -26,7 +26,7 @@
                         <a href="shop.html" class="nav__link">Shope</a>
                     </li>
                     <li class="nav__item">
-                        <a href="dlc.html" class="nav__link">DLC</a>
+                        <a onclick="readAboutAllDlcs()" class="nav__link">DLC</a>
                     </li>
                 </ul>
             </div>
@@ -50,13 +50,13 @@
         <section class="slideshow__container">
             <div class="slides fade"> 
                 <a href="#newGames">
-                <img src="assets/images/ReadMoreAboutThisGame.png" >
+                <img src="assets/images/slaideshowImg/ReadMoreAboutThisGame.png" >
             </a>
             </div>
 
             <div class="slides fade">
                 <a href="#topGames">
-                <img src="assets/images/Destiny2Forsaken.png">
+                <img src="assets/images/slaideshowImg/Destiny2Forsaken.png">
 
                 </a>
             </div>
@@ -80,13 +80,13 @@
 
         <!-- ---------------------------- Featured DLC ----------------------------- -->
 
-        <!-- <section class="featured section" id="featured">
+        <section class="featured section" id="featured">
             <h2 class="section__title">DLC</h2>
-            <div id="game" class="featured__container bd-grid">
+            <div id="game__dlcs" class="featured__container bd-grid">
 
             </div>
 
-        </section> -->
+        </section>
         <!-- ------------------------------ top sales ------------------------------ -->
         <section class="featured section" id="featured topGames">
             <h2 class="section__title">Top Games 2020</h2>

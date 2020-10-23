@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/popupStyle.css">
+    <link rel="stylesheet" href="assets/css/slideshow.css">
     <title>Game Shop</title>
 </head>
-<body onload="getAboutTheGame(); getshoppingCart()">
-    <div id="result"></div>
 
-<!-- ---------------------- read more about the games ---------------------- -->
-<header class="l-header" id="header">
-    <nav class="nav bd-grid">
-        <div class="nav__toggle" id="nav-toggle">
-            <ion-icon onclick="showMenu()"  name="menu-outline"></ion-icon>
-        </div>
-
-        <a href="index.html" class="nav__logo">Game Shop</a>
-
-        <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="shop.html" class="nav__link">Shope</a>
-                </li>
-                <li class="nav__item">
-                    <a href="dlc.html" class="nav__link">DLC</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- -------------------------------- Cart --------------------------------- -->
-
-        <div class="nav__shop">
-            <a href="shopingCart.html">
-                <ion-icon name="basket-outline">
-                </ion-icon><span id="cart-count"></span>
-            </a>
-        </div>
-    </nav>
-</header>
-
-    <main>
-        <section class="featured section" id="featured topGames">
-            <div id="game" class="featured__container bd-grid">
-
+<body onload="getAboutTheGame()">
+    <!-- ------------------------------- Header -------------------------------- -->
+    <header class="l-header" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav__toggle" id="nav-toggle">
+                <ion-icon onclick="showMenu()"  name="menu-outline"></ion-icon>
             </div>
-        </section>
 
-<!-- --------------------------- horezonal line ---------------------------- -->
+            <a href="index.html" class="nav__logo">Game Shop</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Shope</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="dlc.html" class="nav__link">DLC</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- -------------------------------- Cart --------------------------------- -->
+
+            <div class="nav__shop">
+                <a href="shopingCart.html">
+                    <ion-icon name="basket-outline">
+                    </ion-icon><span id="cart-count"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- -------------------------------- Home --------------------------------- -->
+
+    <!-- ------------------------------ slideshow ------------------------------ -->
+    <!-- make container responsive -->
+    <main>
+        <h1>Read More</h1>
+        <div id="game"></div>
 
     </main>
+
+    <!-- ----------------------- added to shopping cart ------------------------ -->
+    <div id="result"></div>
     <!-- ------------------------------- footer -------------------------------- -->
     <footer class="footer section">
         <div class="footer__container bd-grid">
@@ -61,8 +65,8 @@
             <div class="footer__box">
                 <h3 class="footer__title">EXPLORE</h3>
                 <ul>
-                    <li><a href="#" class="footer__link">Shop</a></li>
-                    <li><a href="#" class="footer__link">DLC</a></li>
+                    <li><a href="shop.html" class="footer__link">Shop</a></li>
+                    <li><a href="dlc.html" class="footer__link">DLC</a></li>
                 </ul>
             </div>
     
@@ -85,8 +89,12 @@
         <p class="footer__copy">&copy; 2020 Holth Development</p>
     </footer>
     
-<!-- ------------------------------- footer -------------------------------- -->
-<script src="assets/js/readMore.js"></script>
-<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+
+    <!-- ---------------------------- script files ----------------------------- -->
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/readMore.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </body>
+
 </html>

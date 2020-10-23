@@ -94,3 +94,7 @@ function clearCart() {
     window.location.reload();
 
 }
+
+function toCheckout(){
+    location.replace("checkout.html")
+}
