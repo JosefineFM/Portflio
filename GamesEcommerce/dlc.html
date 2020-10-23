@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/popupStyle.css">
+    <link rel="stylesheet" href="assets/css/slideshow.css">
+    <title>Game Shop</title>
 </head>
-<body>
 
-<!-- ------------------------------ dlc menu ------------------------------- -->
+<body onload="readAboutDlc();">
+    <!-- ------------------------------- Header -------------------------------- -->
+    <header class="l-header" id="header">
+        <nav class="nav bd-grid">
+            <div class="nav__toggle" id="nav-toggle">
+                <ion-icon onclick="showMenu()"  name="menu-outline"></ion-icon>
+            </div>
 
+            <a href="index.html" class="nav__logo">Game Shop</a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="shop.html" class="nav__link">Shope</a>
+                    </li>
+                    <li class="nav__item">
+                        <a onclick="readAboutAllDlcs()" class="nav__link">DLC</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- -------------------------------- Cart --------------------------------- -->
+
+            <div class="nav__shop">
+                <a href="shopingCart.html">
+                    <ion-icon name="basket-outline">
+                    </ion-icon><span id="cart-count"></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- -------------------------------- Home --------------------------------- -->
+
+    <!-- ------------------------------ slideshow ------------------------------ -->
+    <!-- make container responsive -->
+    <main>
+        <section featured section>
+            <div id="dlcData" class="featured__container bd-grid">
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ----------------------- added to shopping cart ------------------------ -->
+    <div id="result"></div>
+
+
+    <!-- ------------------------------- footer -------------------------------- -->
+    <footer class="footer section">
+        <div class="footer__container bd-grid">
+            <div class="footer__box">
+                <h3 class="footer__title">Games Shop</h3>
+                <p class="footer__description">New collection of Games 2020</p>
+            </div>
+    
+            <div class="footer__box">
+                <h3 class="footer__title">EXPLORE</h3>
+                <ul>
+                    <li><a href="shop.html" class="footer__link">Shop</a></li>
+                    <li><a href="dlc.html" class="footer__link">DLC</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer__box">
+                <h3 class="footer__title">SUPPORT</h3>
+                <ul>
+                    <li><a href="#" class="footer__link">Product Help</a></li>
+                    <li><a href="#" class="footer__link">Customer Care</a></li>
+                    <li><a href="#" class="footer__link">Athorized Service</a></li>
+    
+                </ul>
+            </div>
+    
+            <div class="footer__box">
+                <a href="#" class="footer__social"><img src="https://img.icons8.com/ios/50/000000/facebook-new.png"/></a>
+                <a href="#" class="footer__social"><img src="https://img.icons8.com/ios/50/000000/instagram-new.png"/></a>
+                <a href="#" class="footer__social"><img src="https://img.icons8.com/ios/50/000000/email.png"/></a>
+            </div>
+        </div><br>
+        <p class="footer__copy">&copy; 2020 Holth Development</p>
+    </footer>
+    
+
+    <!-- ---------------------------- script files ----------------------------- -->
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/getData.js"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 </body>
+
 </html>
