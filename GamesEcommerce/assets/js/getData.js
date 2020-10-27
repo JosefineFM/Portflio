@@ -28,18 +28,18 @@ function loadData() {
                 };
 
 
-                if (gamefeatured === 1) { // console.log("Game Title: " + gameTitle)
+                if (gamefeatured === 1) { 
 
 
-                    output += ' <article class="game">' + ' <img src="' + gameImg + '" alt="" class="game__img"></img>' + ' <span class="game__price">' + gamePrice + '</span>' + '<button class="button-light games__button" onclick="AddToShoppingCart( \'' + gameId + '\',\'' + gameTitle + '\')">Add to Cart</button>' + '<button class="button-light games__button" onclick="readMore( ' + gameId + ')"">Read More</button>' + '</article>'
+                    output += ' <article class="game">' + ' <img src="' + gameImg + '" alt="" class="game__img"></img>' + ' <span class="game__price">' + gamePrice + '</span>' + '<button class="games__button" onclick="AddToShoppingCart( \'' + gameId + '\',\'' + gameTitle + '\')">Add to Cart</button>' + '<button class="games__button" onclick="readMore( ' + gameId + ')"">Read More</button>' + '</article>'
                 }
 
                 if (topGames === 1) {
-                    outputTopGames += ' <article class="game">' + ' <img src="' + gameImg + '" alt="" class="game__img"></img>' + ' <span class="game__price">' + gamePrice + '</span>' + '<button class="button-light games__button" onclick="AddToShoppingCart( \'' + gameId + '\',\'' + gameTitle + '\')">Add to Cart</button>' + '<button class="button-light games__button" onclick="readMore( ' + gameId + ')"">Read More</button>' + '</article>'
+                    outputTopGames += ' <article class="game">' + ' <img src="' + gameImg + '" alt="" class="game__img"></img>' + ' <span class="game__price">' + gamePrice + '</span>' + '<button class=" games__button" onclick="AddToShoppingCart( \'' + gameId + '\',\'' + gameTitle + '\')">Add to Cart</button>' + '<button class=" games__button" onclick="readMore( ' + gameId + ')"">Read More</button>' + '</article>'
                 }
 
                 if (newGames === 1) {
-                    outputNewGames += ' <article class="game">' + ' <img src="' + gameImg + '" alt="" class="game__img"></img>' + ' <span class="game__price"> Release: ' + gameRelease + '</span>' + ' <span class="game__price">' + gamePrice + '</span>' + '<button class="button-light games__button" onclick="readMore( ' + gameId + ')"">Read More</button>' + '</article>'
+                    outputNewGames += ' <article class="game">' + ' <img src="' + gameImg + '" alt="" class="game__img"></img>' + ' <span class="game__price"> Release: ' + gameRelease + '</span>' + ' <span class="game__price">' + gamePrice + '</span>' + '<button class=" games__button" onclick="readMore( ' + gameId + ')"">Read More</button>' + '</article>'
                 }
 
 
@@ -52,8 +52,14 @@ function loadData() {
         }
     }
     xhr.send();
-    // console.log(localStorage.getItem('shoppingCartItems'))
 
+}
+
+function slideShowOne(){
+    sessionStorage.setItem("readMoreId", 1);
+}
+function slideShowTwo(){
+    sessionStorage.setItem("readMoreId", 3);
 }
 
 function AddToShoppingCart(gameId, gameTitle) { // Get the existing data
@@ -85,7 +91,6 @@ function dlc() {
     xhr.onload = function () {
         if (this.status == 200) {
             dlcData = JSON.parse(this.responseText)
-            console.log(dlcData)
 
             for (i in dlcData) {
                 let featuredDlc = dlcData[i].featuredDlc;
@@ -96,7 +101,12 @@ function dlc() {
 
 
                 if (featuredDlc === 1) {
-                    dlcOutput += ' <article class="game">' + ' <img src="' + dlcimg + '" alt="" class="game__img"></img>' + ' <span class="game__price">' + dlcprice + '</span>' + '<button class="button-light games__button" onclick="AddToShoppingCart( \'' + dlcId + '\',\'' + dlcTitle + '\')">Add to Cart</button>' + '<button class="button-light games__button" onclick="readMoreAboutDLC( ' + dlcId + ')"">Read More</button>' + '</article>'
+                    dlcOutput += 
+                    ' <article class="game">' + 
+                    ' <img src="' + dlcimg + '" alt="" class="game__img"></img>' + 
+                    ' <span class="game__price">' + dlcprice + '</span>' + 
+                    '<button class=" games__button" onclick="AddToShoppingCart( \'' + dlcId + '\',\'' + dlcTitle + '\')">Add to Cart</button>' + 
+                    '<button class="games__button" onclick="readMoreAboutDLC( ' + dlcId + ')"">Read More</button>' + '</article>'
                 }
 
             }
@@ -107,53 +117,97 @@ function dlc() {
 
     cart = JSON.parse(localStorage.getItem('shoppingCartItems'));
 
-    document.getElementById('cart-count').innerHTML = cart.length;
-}
+    if(cart == null ){
+        "empty"
+    } else{
+
+        document.getElementById('cart-count').innerHTML = cart.length;
+    }}
 
 function readAboutDlc() {
     const xhr = new XMLHttpRequest();
     let dlcoutput = '';
 
     cart = JSON.parse(localStorage.getItem('shoppingCartItems'));
-    document.getElementById('cart-count').innerHTML = cart.length;
-
-    console.log("running funtion")
 
     var sessionDlcId = sessionStorage.getItem("readMoreAboutDLC");
-    console.log(sessionDlcId)
 
     if (sessionDlcId === null) {
         xhr.open('GET', 'assets/data/dlc.json', true);
-
-        dlcoutput += 
-        ' <article class="game">' +
-        'Empty'+
-        '</article>'
-    } else {
-        dlcoutput += 
-        ' <article class="game">' +
-        'Not Empty'+
-        '</article>'
-        // const xhr = new XMLHttpRequest();
-
-        xhr.open('GET', 'assets/data/dlc.json', true);
-
 
         xhr.onload = function () {
             if (this.status == 200) {
                 let dlcData = JSON.parse(this.responseText)
 
                 for (i in dlcData) {
-                    let dlcimg = dlcData[i].image;
-                    let gameTitle = dlcData[i].title;
-                    let gamePrice = dlcData[i].price;
+                    let dlcimg = dlcData[i].dlcImg;
+                    let dlcTitle = dlcData[i].title;
+                    let dlcPrice = dlcData[i].price;
                     let dlcId = dlcData[i].dlcId
 
-
+                    dlcoutput += ' <article class="dlcCart">' + 
+                    ' <img src="' + dlcimg + '" alt="" class="dlc_image"></img>' + 
+                    '<h2 class="dlcTitle">'+ dlcTitle +'</h2>' + 
+                    '<span class="dlcPrice">' + dlcPrice + '</span>' + 
+                    '<button class="dlcButton" onclick="AddToShoppingCart( \'' + dlcId + '\',\'' + dlcTitle + '\')">Add to Cart</button>' + 
+                    '<button class="dlcButton" onclick="readMoreAboutDLC( ' + dlcId + ')"">Read More</button>' + '</article>'
+                    '</article>'
                 }
+                document.getElementById('dlcData').innerHTML = dlcoutput;
+
             }
         }
+
+    } else {
+        // const xhr = new XMLHttpRequest();
+        
+        xhr.open('GET', 'assets/data/dlc.json', true);
+        
+        
+        xhr.onload = function () {
+            if (this.status == 200) {
+                let dlcData = JSON.parse(this.responseText)
+                
+                for (i in dlcData) {
+                    let dlcimg = dlcData[i].dlcImg;
+                    let dlcTitle = dlcData[i].title;
+                    let dlcPrice = dlcData[i].price;
+                    let dlcPlot = dlcData[i].plot;
+                    let dlcId = dlcData[i].dlcId
+                    let dlcReleaseDate = dlcData[i].releaseDate
+                    let dlcGenre = dlcData[i].Genre
+                    let dlcVideo = dlcData[i].video
+
+
+
+                    if(sessionDlcId === dlcId){
+
+                        dlcoutput +=  
+                        ' <article class="dlcCart">' + 
+                        ' <img src="' + dlcimg + '" alt="" class="dlc_image"></img>' + 
+                        '<h2 class="dlcTitle">'+ dlcTitle +'</h2>' + 
+                        '<span class="dlcInfo">Release Date: ' + dlcReleaseDate + '</span>' + 
+                        '<span class="dlcInfo">Genre:  ' + dlcGenre + '</span>' + 
+                        '<span class="dlcInfo">' + dlcPlot + '</span>' + 
+                        '<button class="dlcButton" onclick="AddToShoppingCart( \'' + dlcId + '\',\'' + dlcTitle + '\')">Add to Cart</button>' + 
+                        '<div class="dlcVideo">'+
+                        '<iframe src="' + dlcVideo+ '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'+
+                        '</div>'+
+                        
+                        '</article>'
+
+                    }
+                    
+
+                }
+                document.getElementById('dlcData').innerHTML = dlcoutput;
+            }
+        }
+    } xhr.send();
+    if(cart == null ){
+        "empty"
+    } else{
+
+        document.getElementById('cart-count').innerHTML = cart.length;
     }
-    xhr.send();
-    document.getElementById('dlcData').innerHTML = dlcoutput;
 }
