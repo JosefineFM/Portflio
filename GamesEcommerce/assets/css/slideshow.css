@@ -38,8 +38,8 @@
 img {vertical-align: middle;}
 
 .slideshow__container{
+  padding-top: 20px;
     position: relative;
-    grid-template-columns: repeat(minmax(320px, 1fr));
 }
 
 .slides{
@@ -137,7 +137,6 @@ img {vertical-align: middle;}
       max-width: 1024px;
       margin-left: auto;
       margin-right: auto;
-
-margin-top: 70px;
+      /* padding-top: 0px; */
   }
 }

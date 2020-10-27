@@ -1,0 +1,68 @@
+.container{
+    padding: 5rem 0 2rem
+}
+
+.dlcData{
+    row-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    
+}
+
+/* ---------------------------------- Phone --------------------------------- */
+.dlcTitle{
+    text-align: center;
+}
+.dlcCart{
+    padding: 2.25rem 0px;
+
+    margin: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.dlcButton{
+    width: 120px;
+    margin-top: 1.30rem;
+    border: none;
+    background-color: var(--sizzling-zunrise);
+    font-size: 14px;
+    padding: 10px 15px;
+}
+.dlc_image{
+    width: 400px;
+    margin-top: var(--mb-1);
+    margin-bottom: var(--mb-3);
+    filter: drop-shadow(0 12px 8px rgb(0,0,0,.2));
+}
+
+.dlcPrice{
+    font-size: var(--h2-font-size);
+    letter-spacing: .1rem;
+    font-weight: var(--font--bold);
+    text-align: center;
+}
+
+.dlcInfo{
+    padding: 1rem;
+    
+}
+
+.dlcVideo{
+    padding-top: 2rem;
+    height: 315;
+}
+/* --------------------------------- Tablet --------------------------------- */
+
+@media screen and (min-width: 768px)
+/* to game in one row */
+
+{}
+
+/* --------------------------------- Desktop -------------------------------- */
+/* tree game in one row */
+@media screen and (min-width: 1024px) {
+}
