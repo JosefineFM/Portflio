@@ -10,7 +10,9 @@
         "developer": "Guerrilla Games",
         "releaseDate": "November 7, 2017",
         "plot" : "Beyond the northern mountains, the borderlands of the Banuk tribe challenge all who dare enter to survive the extremes. But now this frozen wilderness harbors a new threat, and for Aloy, a new mystery - one she’s determined to solve.",
-        "featuredDlc" : 1
+        "featuredDlc" : 1,
+        "Genre" : "Single-player, Action, Role-play",
+        "video" : "https://www.youtube.com/embed/6n98pUj2PNI"
     },
     {
         "id": "2" ,
@@ -22,7 +24,10 @@
         "developer": "",
         "releaseDate": "8 September, 2015",
         "plot": "After saving the world of Thedas by closing the Breach, your next mission determines the future of the Inquisition itself. Win a race against time to defeat a great evil that could devastate Thedas. In this DLC, playable after the events of Dragon Age: Inquisition, embark on a last adventure to confront the one who started it all.",
-        "featuredDlc" : 1  
+        "featuredDlc" : 1 ,
+        "Genre" : "",
+        "video" : "https://www.youtube.com/embed/bUQKGFMfXx0"
+ 
     },
     {
         "id": "2" ,
@@ -34,7 +39,10 @@
         "developer": "",
         "releaseDate": "11 August, 2015",
         "plot": "Enter the Deep Roads to battle monstrous darkspawn, bloodthirsty creatures that dwell beneath the surface of Thedas. Explore ancient ruins and cavernous dungeons to find the cause of worsening earthquakes. In this new adventure, the Inquisitor will fight new adversaries, gain epic weapons and armor, and solve one of Thedas' greatest mysteries.",
-        "featuredDlc" : 0 
+        "featuredDlc" : 0 ,
+        "Genre" : "",
+        "video" : "https://www.youtube.com/embed/N_L4qyvxAFI"
+
     },
     {
         "id": "2" ,        
@@ -46,7 +54,9 @@
         "developer": "",
         "releaseDate": "26 May, 2015",
         "plot": "Enter an overgrown wilderness filled with Avvar, fiercely independent hunters who settled in the southern mountains of Thedas. Explore the culture to uncover what happened to the last Inquisitor and the dragon he pursued. Find an ancient Tevinter fortress that hides a dangerous secret.", 
-        "featuredDlc" : 1
+        "featuredDlc" : 1,
+        "Genre" : "",
+        "video" : "https://www.youtube.com/embed/N_L4qyvxAFI"
 
     }
       
