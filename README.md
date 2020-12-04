@@ -1,21 +1,19 @@
 # Min Portflio
 
-## Game Shop, where to by your new game
-### E-commerce page
-**Frontend:** HTML, CSS and JavaScript,
-
-This is my portefolio home page. 
-
-[**The Code**](https://github.com/JosefineFH/Portflio/tree/master/GamesEcommerce) | 
-[**Live Page**](https://ecommercegames.netlify.app)
-
-## My homepage
+## JosfineHolth.tech
 **Frontend:** HTML, CSS and JavaScript, framwork Vue.js
 
 This is my portefolio home page. 
 
 [**The Code**](https://github.com/JosefineFH/JosefineMagnussenWebPage) | 
 [**Live Page**](https://josfineholth.tech/)
+
+## Game Shop, where to by your new game
+### E-commerce page
+**Frontend:** HTML, CSS and JavaScript,
+
+[**The Code**](https://github.com/JosefineFH/Portflio/tree/master/GamesEcommerce) | 
+[**Live Page**](https://ecommercegames.netlify.app)
 
 ## Thiccc Boyz Gaming 🎮 
 **Frontend:** HTML, CSS and JavaScript
